@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 20px;
+}
+div#container {
+    width: 100%;
+}
+
+h1 {
+    font-size: 7vw;
+    font-family: "Kaushan Script";
+    letter-spacing: 5px;
+    line-height: 1.25;
+    text-align: center;
+    text-shadow: 4px 4px #fff;
+}
+h2 {
+    font-size: 2rem;
+    font-family: "Kaushan Script";
+    letter-spacing: 2px;
+    line-height: 1.25;
+    text-align: center;
+    text-shadow: 2px 2px #fff;
+}
+h3 {
+    font-size: 1.75rem;
+    font-family: "Catamaran";
+    letter-spacing: 2px;
+    line-height: 1.25;
+    text-align: center;
+    text-shadow: 2px 2px #fff;
+}
+p {
+    font-family: "Merriweather";
+    text-align: justify;
+    font-size: 1rem;
+}
+a {
+    text-decoration: none;
+}
+
+.parallax {
+    background-attachment: fixed;
+}
+/*Icons*/
+.fa {
+    font-size: 50px;
+    color: #000;
+}
+.fa:hover {
+    opacity: .6;
+}
+/*Flip effect*/
+.flip-container {
+    position: relative;
+    cursor: pointer;
+    perspective: 800px;
+    -webkit-perspective: 800px;
+}
+.flip-faces {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: transform 2s;
+    -webkit-transition: transform 2s;
+}
+.flipped {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+.front, .back {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    display: block;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.front:hover, .back:hover {
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+}
+.back {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+/*Flex*/
+.flex-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+}
+.flex-item {
+    margin: 1% auto;
+    text-align: center;
+}
