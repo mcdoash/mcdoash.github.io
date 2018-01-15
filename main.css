@@ -11,15 +11,15 @@ div#container {
 
 h1 {
     font-size: 7vw;
-    font-family: "Kaushan Script";
+    font-family: "Satisfy";
     letter-spacing: 5px;
     line-height: 1.25;
     text-align: center;
     text-shadow: 4px 4px #fff;
 }
 h2 {
-    font-size: 2rem;
-    font-family: "Kaushan Script";
+    font-size: 2.5rem;
+    font-family: "Satisfy";
     letter-spacing: 2px;
     line-height: 1.25;
     text-align: center;
@@ -27,14 +27,14 @@ h2 {
 }
 h3 {
     font-size: 1.75rem;
-    font-family: "Catamaran";
+    font-family: "Raleway";
     letter-spacing: 2px;
     line-height: 1.25;
     text-align: center;
     text-shadow: 2px 2px #fff;
 }
 p {
-    font-family: "Merriweather";
+    font-family: "Lora";
     text-align: justify;
     font-size: 1rem;
 }
@@ -107,7 +107,6 @@ a {
 /*Section defaults*/
 section {
     padding: 5%;
-    position: relative;
     box-shadow: 0 10px 150px #000;
     background-position: center;
     background-repeat: no-repeat;
@@ -133,7 +132,7 @@ section#website {
 }
 .slide img {
     width: 100%;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 .slide img:hover {
     opacity: 0.75;
@@ -188,18 +187,42 @@ section#website {
 
 
 /*Art section*/
+section#art {
+    background-color: #4d0066;
+}
 .column {
     width: 33vw;
+    background-color: #fff;
 }
 .art {
     width: 100%;
     height: 33vw;
     overflow: hidden;
+    position: relative;
     cursor: pointer;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.art:hover {
+.title {
+    width: 100%;
+    padding: 2%;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    color: #fff;
+    text-shadow: none;
+    background-color: rgba(0,0,0,0.5);
+    transition: opacity 1s ease;
+}
+.art img {
+    transition: opacity 1s ease;
+}
+.art img:hover {
     opacity: 0.5;
+    transition: opacity 1s ease;
+}
+.art:hover img + .title {
+    opacity: 1;
+    transition: opacity 1s ease;
 }
