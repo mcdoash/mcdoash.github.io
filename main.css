@@ -102,3 +102,86 @@ a {
     margin: 1% auto;
     text-align: center;
 }
+
+
+/*Section defaults*/
+section {
+    padding: 5%;
+    position: relative;
+    box-shadow: 0 10px 150px #000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*About section*/
+section#website {
+    background-color: #000066;
+    transition: background-image 0.5s linear;
+}
+.slideshow-container {
+    width: 65%;
+    margin: auto;
+    position: relative;
+}
+.slide {    
+    height: 550px;
+    padding: 5%;
+    display: none;
+    background-color: rgba(255,255,255,0.95);
+}
+.slide img {
+    width: 100%;
+    margin-top: 5%;
+}
+.slide img:hover {
+    opacity: 0.75;
+}
+.prev, .next {
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    border-radius: 0 3px 3px 0;
+    transition: 0.6s ease;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.dot {
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #ddd;
+    transition: background-color 1s ease;
+}
+.active, .dot:hover {
+    background-color: #fff;
+}
+.fade {
+    animation: 2s fade ease;
+}
+.slide p, .slide h2, .slide img {
+    animation: 2.5s fadeIn ease-in;
+}
+@keyframes fade {
+    from {opacity: 0.6;}
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

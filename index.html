@@ -23,7 +23,85 @@
     
     <body>
         <div id="container">
+            <!--Website section-->
+            <section id="website" class="parallax">
+                
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <h2>
+                            <a href="https://github.com/CentralProgramming/CentralProgramming.ca" alt="Programming Club GitHub repository" target="_blank" class="fa fa-github-square"></a>
+                            Central Programming Club
+                        </h2>
+                        
+                        <a href="http://centralprogramming.ca/" alt="Programming Club Website" target="_blank"><img src="images/cpc-website.png"></a>
+                    </div>
+                    
+                    <div class="slide fade">
+                        <h2>
+                            <a href="https://github.com/mcdoash/FutureWorks-Website" alt="FutureWorks GitHub repository" target="_blank" class="fa fa-github-square"></a>
+                            FutureWorks
+                        </h2>
+                        
+                        <a href="#" alt="FutureWorks Website" target="_blank"><img src="images/"></a>
+                    </div>
+                    
+                    <div class="slide fade">
+                        <h2>
+                            <a href="#" alt="Personal Website GitHub repository" target="_blank" class="fa fa-github-square"></a>
+                            Personal Website
+                        </h2>
+                        
+                        <a href="#" alt="Personal Website" target="_blank"><img src="images/"></a>
+                    </div>
+                    
+                    <!--Prev/next buttons-->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                    <!--Slide dots-->
+                    <div style="text-align: center; margin-top: 2%;">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </section>
         </div>
+        
+        <script>
+            /*Slideshow*/
+            var slideIndex = 1;
+            changeSlides(slideIndex);
+            
+            function plusSlides(n){
+                changeSlides(slideIndex+=n);
+            }
+            function currentSlide(n){
+                changeSlides(slideIndex=n);
+            }
+            function changeSlides(n){
+                var slides = document.getElementsByClassName("slide");
+                var dots = document.getElementsByClassName("dot");
+                var backgrounds = ["image1", "image2", "image3"];
+                
+                if(n>slides.length){
+                    slideIndex = 1;
+                }
+                else if(n<1){
+                    slideIndex = slides.length;
+                }
+                
+                for(var i=0; i<slides.length; i++){
+                    slides[i].style.display = "none";
+                }
+                for(var i=0; i<dots.length; i++){
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                document.getElementById("about").style.backgroundImage = "url(images/" + backgrounds[slideIndex-1] + ".JPG)"
+            }
+        </script>
     </body>
     
 </html>
