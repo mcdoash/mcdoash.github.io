@@ -23,7 +23,6 @@ h2 {
     letter-spacing: 2px;
     line-height: 1.25;
     text-align: center;
-    text-shadow: 2px 2px #fff;
 }
 h3 {
     font-size: 1.75rem;
@@ -31,12 +30,11 @@ h3 {
     letter-spacing: 2px;
     line-height: 1.25;
     text-align: center;
-    text-shadow: 2px 2px #fff;
 }
 p {
     font-family: "Lora";
-    text-align: justify;
     font-size: 1rem;
+    line-height: 1.5;
 }
 a {
     text-decoration: none;
@@ -107,7 +105,6 @@ a {
 /*Section defaults*/
 section {
     padding: 5%;
-    box-shadow: 0 10px 150px #000;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -116,8 +113,8 @@ section {
 
 /*About section*/
 section#website {
-    background-color: #000066;
-    transition: background-image 0.5s linear;
+    transition: background-color 1s linear;
+    background: linear-gradient(#ccfff2, #ccf2ff);
 }
 .slideshow-container {
     width: 65%;
@@ -125,17 +122,38 @@ section#website {
     position: relative;
 }
 .slide {    
-    height: 550px;
+    height: 800px;
     padding: 5%;
     display: none;
+    position: relative;
     background-color: rgba(255,255,255,0.95);
 }
 .slide img {
     width: 100%;
-    margin-top: 3%;
+    margin: 3% 0 4%;
 }
 .slide img:hover {
     opacity: 0.75;
+}
+.slide-icons {
+    width: 90%;
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    text-align: center;
+}
+.icon {
+    margin: 2% 3%;
+    display: inline-block;
+}
+.icon .fa {
+    display: inline-block;
+    font-size: 50px;
+    vertical-align: bottom;
+}
+.icon p {
+    display: inline-block;
+    line-height: 50px;
 }
 .prev, .next {
     width: auto;
@@ -186,9 +204,54 @@ section#website {
 }
 
 
+/*Experience section*/
+section#experience {
+    overflow: hidden;
+    background-color: #0099cc;
+}
+#progress-bars {
+    width: 35%;
+    float: left;
+}
+#progress-bars h2 {
+    font-size: 2rem;
+    text-align: left;
+    color: #fff;
+    text-shadow: 4px 4px #000;
+}
+.bar {
+    width: 100%;
+    height: 20px;
+    margin: 1% 0 5%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
+    background-color: #e6f7ff;
+    transition: opacity 0.5s ease;
+}
+.progress {
+    height: 100%;
+    margin: 2% 0;
+    border-radius: 20px 0 0 20px;
+    background: linear-gradient(to right, #80ffdf, #66d9ff);
+}
+.bar:hover {
+    opacity: 0.75;
+    transition: opacity 1s ease;
+}
+#more {
+    width: 55%;
+    min-height: 200px;
+    padding: 2%;
+    float: right;
+    background-color: rgba(255,255,255,0.95);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+}
+
+
 /*Art section*/
 section#art {
-    background-color: #4d0066;
+    position: relative;
+    background: linear-gradient(#ccfff2, #ccf2ff);
 }
 .column {
     width: 33vw;
@@ -211,7 +274,6 @@ section#art {
     bottom: 0;
     opacity: 0;
     color: #fff;
-    text-shadow: none;
     background-color: rgba(0,0,0,0.5);
     transition: opacity 1s ease;
 }
@@ -225,4 +287,22 @@ section#art {
 .art:hover img + .title {
     opacity: 1;
     transition: opacity 1s ease;
+}
+#modal {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    z-index: 99;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+#modal-img {
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin: auto;
 }
