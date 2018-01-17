@@ -141,33 +141,39 @@
             <!--Experience section-->
             <section id="experience">
                 <div id="progress-bars">
-                    <h2>HTML</h2>
+                    <h3>HTML</h3>
                     <div class="bar">
+                        <span class="percent"><p>85%</p></span>
                         <div class="progress" style="width: 85%;"></div>
                     </div>
 
-                    <h2>CSS</h2>
+                    <h3>CSS</h3>
                     <div class="bar">
+                        <span class="percent"><p>65%</p></span>
                         <div class="progress" style="width: 65%;"></div>
                     </div>
 
-                    <h2>PHP</h2>
+                    <h3>PHP</h3>
                     <div class="bar">
+                        <span class="percent"><p>40%</p></span>
                         <div class="progress" style="width: 40%;"></div>
                     </div>
 
-                    <h2>Java</h2>
+                    <h3>Java</h3>
                     <div class="bar">
+                        <span class="percent"><p>70%</p></span>
                         <div class="progress" style="width: 70%;"></div>
                     </div>
 
-                    <h2>Javascript</h2>
+                    <h3>Javascript</h3>
                     <div class="bar">
+                        <span class="percent"><p>45%</p></span>
                         <div class="progress" style="width: 45%;"></div>
                     </div>
 
-                    <h2>SQL</h2>
+                    <h3>SQL</h3>
                     <div class="bar">
+                        <span class="percent"><p>30%</p></span>
                         <div class="progress" style="width: 30%;"></div>
                     </div>
                 </div>
@@ -235,38 +241,33 @@
         </div>
         
         <script>
-            /*Website scroll
-            var siteInfo = $(".website-info");
-            
-            $(window).on("scroll", function() {
-                var scrollTop = $(this).scrollTop();
-                var height = $(window).height();
-                
-                siteInfo.css({
-                    "opacity" : ((height - scrollTop) / height)
+            /*Website scroll*/
+            $(document).ready(function (){
+                $(window).scroll(function (){
+                    if($(this).scrollTop() < ($(window).height()/1.5)){
+                        $('#cpc-website').addClass('show');
+                        $('#fw-website').removeClass('show');
+                    }
+                    else if($(this).scrollTop() < (($(window).height()/1.5)*2)){
+                        $('#cpc-website').removeClass('show');
+                        $('#pw-website').removeClass('show');
+                        $('#fw-website').addClass('show');
+                    }
+                    else if($(this).scrollTop() < (($(window).height())*2.25)){
+                        $('#fw-website').removeClass('show');
+                        $('#pw-website').addClass('show');
+                        $('.site').css({
+                            "visibility" : "visible"
+                        });
+                    }
+                    else{
+                        $('#pw-website').removeClass('show');
+                         $('.site').css({
+                            "visibility" : "hidden"
+                        });
+                    }
                 });
             });
-            */
-            $(document).ready(function (){
-            $(window).scroll(function (){
-                if($(this).scrollTop() < ($(window).height()/1.5)){
-                    $('#cpc-website').addClass('show');
-                    $('#fw-website').removeClass('show');
-                }
-                else if($(this).scrollTop() < (($(window).height()/1.5)*2)){
-                    $('#cpc-website').removeClass('show');
-                    $('#pw-website').removeClass('show');
-                    $('#fw-website').addClass('show');
-                }
-                else if($(this).scrollTop() < (($(window).height())*2.25)){
-                    $('#fw-website').removeClass('show');
-                    $('#pw-website').addClass('show');
-                }
-                else{
-                    $('#pw-website').removeClass('show');
-                }
-            });
-        });
             
             
             /*Slideshow*/
