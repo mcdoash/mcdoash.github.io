@@ -100,6 +100,19 @@ a {
     margin: 1% auto;
     text-align: center;
 }
+/*Animations*/
+@keyframes fade {
+    from {opacity: 0.6;}
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
 
 
 /*Section defaults*/
@@ -110,8 +123,52 @@ section {
     background-size: cover;
 }
 
+/*New site section*/
+section#website-new {
+    height: 300vh;
+    padding: 0;
+    overflow: hidden;
+}
+#website-info {
+    width: 50%;
+    height: 100vh;
+    padding: 5%;
+    float: left;
+}
+.site {
+    width: 40%;
+    height: 80%;
+    position: fixed;
+    opacity: 0;
+    animation: 0.5s fadeOut ease-in;
+}
+.site .site-text {
+    height: 100%;
+    margin: 10% 0;
+}
+.site-icons {
+    width: 40vw;
+    position: absolute;
+    bottom: 1%;
+    left: -2%;
+}
+.show {
+    opacity: 1;
+    animation: 2.5s fadeIn ease-in;
+}
+#website-images {
+    width: 50%;
+    height: 100vh;
+    float: right;
+}
+.site-img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-/*About section*/
+/*Website section*/
 section#website {
     transition: background-color 1s linear;
     background: linear-gradient(#ccfff2, #ccf2ff);
@@ -131,6 +188,7 @@ section#website {
 .slide img {
     width: 100%;
     margin: 3% 0 4%;
+    transition: opacity 1s ease;
 }
 .slide img:hover {
     opacity: 0.75;
@@ -182,7 +240,7 @@ section#website {
     display: inline-block;
     cursor: pointer;
     border-radius: 50%;
-    background-color: #ddd;
+    background-color: #999;
     transition: background-color 1s ease;
 }
 .active, .dot:hover {
@@ -191,23 +249,18 @@ section#website {
 .fade {
     animation: 2s fade ease;
 }
+.fade-in {
+    animation: 4s fadeIn ease;
+}
 .slide p, .slide h2, .slide img {
     animation: 2.5s fadeIn ease-in;
-}
-@keyframes fade {
-    from {opacity: 0.6;}
-    to {opacity: 1;}
-}
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
 }
 
 
 /*Experience section*/
 section#experience {
     overflow: hidden;
-    background-color: #0099cc;
+    background-color: #fff;
 }
 #progress-bars {
     width: 35%;
@@ -216,8 +269,8 @@ section#experience {
 #progress-bars h2 {
     font-size: 2rem;
     text-align: left;
-    color: #fff;
-    text-shadow: 4px 4px #000;
+    color: #0099cc;
+    text-shadow: 2px 2px #006080;
 }
 .bar {
     width: 100%;
@@ -240,11 +293,12 @@ section#experience {
 }
 #more {
     width: 55%;
-    min-height: 200px;
+    min-height: 500px;
     padding: 2%;
     float: right;
-    background-color: rgba(255,255,255,0.95);
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    background-color: #ccf2ff;
+    background: linear-gradient(to bottom right, #80ffdf, #b3ecff);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
 }
 
 
@@ -282,11 +336,9 @@ section#art {
 }
 .art img:hover {
     opacity: 0.5;
-    transition: opacity 1s ease;
 }
 .art:hover img + .title {
     opacity: 1;
-    transition: opacity 1s ease;
 }
 #modal {
     width: 100%;
