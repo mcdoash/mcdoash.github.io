@@ -22,9 +22,25 @@
     </head>
     
     <body>
+        <nav id="side-nav">
+            <a href="#">About</a>
+            <a href="#">Experience</a>
+            <a href="#">Award &amp; Education</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Future Goals</a>
+        </nav>
+        
         <div id="container">
+            <nav id="top-nav">
+                <span id="openbtn" onclick="openNav()">
+                    <div id="bar1"></div>
+                    <div id="bar2"></div>
+                    <div id="bar3"></div>
+                </span>
+                <span id="current"><h1>Ash McDonald</h1></span>
+            </nav>
+            
             <section id="website-new">
-                
                 <div id="website-info">
                     <div id="cpc-website" class="site">
                         <h2>
@@ -241,6 +257,20 @@
         </div>
         
         <script>
+            /*Side nav*/
+            function openNav() {
+                document.getElementById("side-nav").style.width = "250px";
+                document.getElementById("container").style.marginLeft = "250px";
+                document.getElementById("openbtn").classList.add("change");
+                document.getElementById("openbtn").onclick = closeNav;
+            }
+            function closeNav() {
+                document.getElementById("side-nav").style.width = "0";
+                document.getElementById("container").style.marginLeft = "0";
+                document.getElementById("openbtn").classList.remove("change");
+                document.getElementById("openbtn").onclick = openNav;
+            }
+            
             /*Website scroll*/
             $(document).ready(function (){
                 $(window).scroll(function (){
