@@ -11,7 +11,7 @@ div#container {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 5vw;
     font-family: "Raleway";
     line-height: 1.25;
     text-align: center;
@@ -124,37 +124,52 @@ a {
     position: sticky; 
     position: -webkit-sticky;
     top: 0;
+    text-align: center;
     box-shadow: 0 5px 10px rgba(0,0,0,0.25);
     background: linear-gradient(to right, #80ffdf, #66d9ff);
 }
 #openbtn {
     display: inline-block;
-    margin: 5px 5px 5px 20px;
+    position: absolute;
+    left: 2%;
+    bottom: 15%;
+    z-index: 99;
     cursor: pointer;
 }
 #openbtn div {
     width: 35px;
     height: 5px;
-    background-color: #007399;
     margin: 6px 0;
-    transition: 0.4s;
+    background-color: #007399;
+    transition: 0.6s;
+}
+#openbtn:hover div {
+    background-color: #00ace6;
+}
+.change {
+    margin-left: -5%;
+}
+#openbtn.change div {
+    background-color: #a6a6a6;
+}
+#openbtn.change:hover div {
+    background-color: #ddd;
 }
 .change #bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
+    -webkit-transform: rotate(-45deg) translate(-8px, 7px);
+    transform: rotate(-45deg) translate(-8px, 7px);
 }
 .change #bar2 {
     opacity: 0;
 }
 .change #bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
 }
 #current h1 {
-    position: absolute;
-    left: -99999px;
-    right: -99999px;
     display: inline-block;
+    line-height: 55px;
+    font-size: 2rem;
 }
 
 
@@ -172,14 +187,35 @@ a {
     transition: 0.5s;
 }
 #side-nav a {
-    padding: 8px 8px 8px 32px;
+    padding: 3% 4% 3% 10%;
     display: block;
-    font-size: 25px;
+    font-size: 1.25rem;
     color: #a6a6a6;
     transition: 0.3s;
 }
-#side-nav a:hover {
+#side-nav a:hover, #side-nav a:hover .fa-caret-down, #dropbtn:hover  {
+    opacity: 1;
     color: #f1f1f1;
+    background-color: #333333;
+}
+#dropbtn {
+    display: block;
+    position: relative;
+}
+.fa-caret-down {
+    margin-left: 5%;
+    font-size: 1.25rem;
+    color: #a6a6a6;
+}
+#drop-content {
+    height: 0;
+    padding-left: 10%;
+    opacity: 0;
+}
+#dropbtn:hover #drop-content {
+    height: auto;
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 
 
@@ -190,6 +226,28 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+/*Intro section*/
+section#intro {
+    height: 100vh;
+    position: relative;
+    background-image: url(images/about.jpg)
+}
+#name {
+    width: 50%;
+}
+#intro-text {
+    width: 40%;
+    height: 60vh;
+    padding: 2%;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    background-color: rgba(255,255,255,0.85);
+}
+
 
 /*New site section*/
 section#website-new {
@@ -387,14 +445,19 @@ section#experience {
 .bar:hover .percent {
     opacity: 1;
 }
-#more {
+.exp-box {
     width: 55%;
-    min-height: 500px;
+    min-height: 200px;
     padding: 2%;
     float: right;
-    background-color: #ccf2ff;
-    background: linear-gradient(to bottom right, #80ffdf, #b3ecff);
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    border: 2px solid #0099cc;
+    border-radius: 20px;
+    background-color: #0099cc;
+    background: linear-gradient(to bottom right, #e6f9ff, #000);
+    transition: opacity 0.5s ease;
+}
+.exp-box:hover {
+    opacity: 0.75;
 }
 
 
