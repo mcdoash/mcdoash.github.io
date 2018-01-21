@@ -170,8 +170,20 @@ a:hover {
 }
 #current h1 {
     display: inline-block;
-    line-height: 55px;
+    line-height: 50px;
     font-size: 2rem;
+}
+#nav-icons {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+#nav-icons .fa {
+    margin: 0 1%;
+    display: inline-block;
+    float: right;
+    color: #007399;
+    line-height: 55px;
 }
 
 

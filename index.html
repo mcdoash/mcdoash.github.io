@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta name="keywords" content="">
         <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="author" content="Ashley McDonald">
         
         <!--Fonts and icons-->
         <link href="https://fonts.googleapis.com/css?family=Raleway&#124;Satisfy&#124;Lora" rel="stylesheet">
@@ -21,6 +21,7 @@
     </head>
     
     <body>
+        <!--Side navigation-->
         <nav id="side-nav">
             <a href="#">About</a>
             <a href="#">Experience</a>
@@ -36,7 +37,9 @@
             <a href="#">Future Goals</a>
         </nav>
         
+        <!--Main content-->
         <div id="container">
+            <!--Intro section-->
             <section id="intro" class="parallax">
                 <div id="name">
                     <h2 style="text-shadow: 4px 4px #fff;">Hi, I'm</h2>
@@ -48,6 +51,7 @@
             </section>
             
             
+            <!--Top navigation-->
             <nav id="top-nav">
                 <span id="openbtn" onclick="openNav()">
                     <div id="bar1"></div>
@@ -55,6 +59,10 @@
                     <div id="bar3"></div>
                 </span>
                 <span id="current"><h1>Ash McDonald</h1></span>
+                <div id="nav-icons">
+                    <a href="https://github.com/mcdoash" target="_blank" class="fa fa-github"></a>
+                    <a href="mailto:ashmc335@gmail.com" class="fa fa-envelope-o"></a>
+                </div>
             </nav>
             
             
@@ -154,7 +162,7 @@
                 <div id="website-info">
                     <div id="cpc-website" class="site">
                         <h2>
-                            <a href="https://github.com/CentralProgramming/CentralProgramming.ca" alt="Programming Club GitHub repository" target="_blank" class="fa fa-github-square"></a>
+                            <a href="https://github.com/CentralProgramming/CentralProgramming.ca" target="_blank" class="fa fa-github-square"></a>
                             <a href="http://centralprogramming.ca/" target="_blank">Central Programming Club</a>
                         </h2>
 
@@ -178,7 +186,7 @@
 
                     <div id="fw-website" class="site">
                         <h2>
-                            <a href="https://github.com/mcdoash/FutureWorks-Website" alt="FutureWorks GitHub repository" target="_blank" class="fa fa-github-square"></a>
+                            <a href="https://github.com/mcdoash/FutureWorks-Website" target="_blank" class="fa fa-github-square"></a>
                             FutureWorks
                         </h2>
 
@@ -308,13 +316,18 @@
             
             /*Website section scroll*/
             $.fn.isInViewport = function() {
-                var elementTop = $(this).offset().top;
+                var elementTop = $(this).offset().top - $("#top-nav").outerHeight();
                 var elementBottom = elementTop + $(this).outerHeight();
                 
                 var viewportTop = $(window).scrollTop();
                 var viewportBottom = viewportTop + $(window).height();
                 
-                return elementBottom > viewportTop && elementTop < viewportBottom;
+                if($(this).hasClass("site")){
+                    return elementBottom > viewportTop && elementTop < viewportBottom;
+                }
+                else {
+                    return elementTop < viewportTop && elementTop < viewportBottom;
+                }
             };
             $(window).on("resize scroll", function() {
                 $(".site").each(function() {
@@ -324,8 +337,13 @@
                     else {
                         $(this).removeClass("show");
                     }
-                })
-            })
+                });
+                $("section").each(function() {
+                    if($(this).isInViewport()) {
+                        $("#current h1").text($(this).attr("id"));
+                    }
+                });
+            });
             
             
             /*Slideshow*/
