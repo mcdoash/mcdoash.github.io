@@ -39,8 +39,9 @@
         
         <!--Main content-->
         <div id="container">
+            
             <!--Intro section-->
-            <section id="intro" class="parallax">
+            <section id="intro" class="parallax" link-title="">
                 <div id="name">
                     <h2 style="text-shadow: 4px 4px #fff;">Hi, I'm</h2>
                     <h1>&horbar;Ash McDonald&horbar;</h1>
@@ -66,8 +67,86 @@
             </nav>
             
             
+            <!--About section-->
+            <section id="about" link-title="about">
+                <div class="flex-container">
+                    <div id="story">
+                        <h2>Who I am</h2><br/>
+                        <p>When I was a kid I loved unpicking knots. Unravelling particularly complex ones always needed an action plan:</p>
+                        <ol>
+                            <li><p>understand how the knot works/which parts to pull</p></li>
+                            <li><p>decide on the best place to start</p></li>
+                            <li><p>plan out each subsequent move in the most optimal order</p></li>
+                        </ol>
+                        <p>This micro-problem-solving was a precursor for my love of more complex problems today. Whether that’s through programming contests, video game puzzles, or finding the most likely spot for a code-breaking typo, the challenge of a difficult problem never daunts me—in fact, it’s what spurs me forwards</p>
+                    </div>
+
+                    <div id="facts">
+                        <h3 style="font-size: 2rem; letter-spacing: 7px; margin-bottom: 5%;">Facts</h3>
+                        <ul>
+                            <li><p>Nintendo enthusiast</p></li>
+                            <li><p>Self-taught in web development</p></li>
+                            <li><p>Firm believer in equity</p></li>
+                            <li><p>Taken every art and computer science course available in high school</p></li>
+                            <li><p>Actually enjoys writting essays</p></li>
+                            <li><p>Made this website in a few weeks while studying for exams</p></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="circle-container">
+                    <div class="circle"><h3>Code</h3></div>
+                    <div class="circle"><h3>Art</h3></div>
+                    <div class="circle"><h3>Art</h3></div>
+                </div>
+            </section>
+            
+            
+            <!--Volunteer section-->
+            <section id="volunteer" class="parallax" link-title="experience: volunteer">
+                    
+                <div class="slide fade">
+                    <div class="vol-text">
+                        <h2>Central Programming Club</h2>
+                        <br/>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare ullamcorper turpis id commodo. Proin sed lorem finibus, pulvinar ex et, euismod enim. Nulla quis facilisis magna. Fusce volutpat velit ante. Nullam fringilla euismod eleifend. Suspendisse convallis nunc tortor.</p>
+                    </div>
+                    <div class="vol-img" style="background-image: url(images/cpc-website.jpg);"></div>
+                </div>
+
+                <div class="slide fade">
+                    <div class="vol-text">
+                        <h2>FutureWorks</h2>
+                        <br/>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare ullamcorper turpis id commodo. Proin sed lorem finibus, pulvinar ex et, euismod enim. Nulla quis facilisis magna. Fusce volutpat velit ante. Nullam fringilla euismod eleifend. Suspendisse convallis nunc tortor.</p>
+                    </div>
+                    <div class="vol-img" style="background-image: url(images/fw-website.png);"></div>
+                </div>
+
+                <div class="slide fade">
+                    <div class="vol-text">
+                        <h2>Music Editing</h2>
+                        <br/>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare ullamcorper turpis id commodo. Proin sed lorem finibus, pulvinar ex et, euismod enim. Nulla quis facilisis magna. Fusce volutpat velit ante. Nullam fringilla euismod eleifend. Suspendisse convallis nunc tortor.</p>
+                    </div>
+                    <div class="vol-img" style="background-image: url(images/pw-website.jpg);"></div>
+                </div>
+
+                <!--Prev/next buttons-->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!--Slide dots-->
+                <div id="dot-holder">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </section>
+            
+            
             <!--Experience section-->
-            <section id="experience">
+            <section id="experience" link-title="experience: programming">
                 <div id="progress-bars">
                     <h3>HTML</h3>
                     <div class="bar">
@@ -113,51 +192,8 @@
             </section>
             
             
-            <!--Volunteer section-->
-            <section id="volunteer" class="parallax">
-                    
-                <div class="slide fade">
-                    <div class="vol-text">
-                        <h2>Central Programming Club</h2>
-                        <br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare ullamcorper turpis id commodo. Proin sed lorem finibus, pulvinar ex et, euismod enim. Nulla quis facilisis magna. Fusce volutpat velit ante. Nullam fringilla euismod eleifend. Suspendisse convallis nunc tortor.</p>
-                    </div>
-                    <div class="vol-img" style="background-image: url(images/cpc-website.jpg);"></div>
-                </div>
-
-                <div class="slide fade">
-                    <div class="vol-text">
-                        <h2>FutureWorks</h2>
-                        <br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare ullamcorper turpis id commodo. Proin sed lorem finibus, pulvinar ex et, euismod enim. Nulla quis facilisis magna. Fusce volutpat velit ante. Nullam fringilla euismod eleifend. Suspendisse convallis nunc tortor.</p>
-                    </div>
-                    <div class="vol-img" style="background-image: url(images/fw-website.png);"></div>
-                </div>
-
-                <div class="slide fade">
-                    <div class="vol-text">
-                        <h2>Music Editing</h2>
-                        <br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare ullamcorper turpis id commodo. Proin sed lorem finibus, pulvinar ex et, euismod enim. Nulla quis facilisis magna. Fusce volutpat velit ante. Nullam fringilla euismod eleifend. Suspendisse convallis nunc tortor.</p>
-                    </div>
-                    <div class="vol-img" style="background-image: url(images/pw-website.jpg);"></div>
-                </div>
-
-                <!--Prev/next buttons-->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <!--Slide dots-->
-                <div id="dot-holder">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
-            </section>
-            
-            
             <!--Website section-->
-            <section id="website">
+            <section id="website" link-title="portfolio: websites">
                 
                 <div id="website-info">
                     <div id="cpc-website" class="site">
@@ -242,7 +278,7 @@
             
             
             <!--Art section-->
-            <section id="art">
+            <section id="art" link-title="portfolio: art">
                 <div class="flex-container">
                     <div class="column flex-item">
                         <div class="art">
@@ -340,7 +376,7 @@
                 });
                 $("section").each(function() {
                     if($(this).isInViewport()) {
-                        $("#current h1").text($(this).attr("id"));
+                        $("#current h1").text($(this).attr("link-title"));
                     }
                 });
             });

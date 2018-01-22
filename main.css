@@ -234,7 +234,7 @@ a:hover {
 
 /*Section defaults*/
 section {
-    padding: 5%;
+    padding: 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -244,6 +244,7 @@ section {
 /*Intro section*/
 section#intro {
     height: 100vh;
+    padding: 5%;
     position: relative;
     background-image: url(images/about.jpg)
 }
@@ -263,10 +264,65 @@ section#intro {
 }
 
 
+/*About section*/
+section#about {
+    overflow: hidden;
+    background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
+}
+#story {
+    width: 50%;
+    padding: 2%;
+    float: left;
+    text-indent: 25px;
+}
+#story ol {
+    margin: 5% 0;
+    text-indent: 5px;
+}
+#facts {
+    width: 50%;
+    min-height: 400px;
+    margin: 0 0 0 5%;
+    padding: 2%;
+    float: right;
+    border: 2px solid #99e6ff;
+    border-radius: 20px;
+    background-color: #0099cc;
+    background: linear-gradient(to bottom right, #e6f9ff, #fff);
+    transition: opacity 0.5s ease;
+}
+#facts li {
+    margin: 2% 0;
+}
+#facts li:hover, .circle:hover {
+    opacity: 0.60;
+}
+#circle-container {
+    width: 100%;
+    text-align: center;
+    clear: both;
+}
+.circle {
+    width: 150px;
+    height: 150px;
+    margin: 5%;
+    display: inline-block;
+    border-radius: 75px;
+    border: 2px solid #99e6ff;
+    background: linear-gradient(to bottom right, #ccfff2, #ccf2ff, #ccd9ff);
+    transition: opacity 0.5s ease;
+}
+.circle h3 {
+    width: 150px;
+    line-height: 150px;
+    font-size: 1.5rem;
+    text-shadow: 4px 4px #fff;
+}
+
+
 /*Website section*/
 section#website {
     height: 300vh;
-    padding: 0;
     overflow: hidden;
 }
 #website-info {
@@ -323,19 +379,17 @@ section#website {
     background-size: cover;
 }
 
-/*Website section*/
+/*Volunteer section*/
 section#volunteer {
-    padding: 0;
-    overflow: hidden;
     position: relative;
-    transition: background-color 1s linear;
+    overflow: hidden;
 }
 .slide {    
     width: 100%;
     height: 100vh;
     display: none;
-    position: relative;
     transition: 0.5s;
+    background: linear-gradient(to bottom, #fff, #fff, #e6f9ff);
 }
 .vol-text {
     width: 50%;
@@ -350,9 +404,6 @@ section#volunteer {
     background-position: center;
     background-size: cover;
     transition: opacity 1s ease;
-}
-.slide img:hover {
-    opacity: 0.75;
 }
 .prev, .next {
     width: auto;
@@ -409,8 +460,9 @@ section#volunteer {
 
 /*Experience section*/
 section#experience {
+    padding: 5%;
     overflow: hidden;
-    background-color: #fff;
+    background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
 }
 #progress-bars {
     width: 35%;
@@ -485,6 +537,7 @@ section#experience {
 
 /*Art section*/
 section#art {
+    padding: 5%;
     position: relative;
     background: linear-gradient(#ccfff2, #ccf2ff, #ccd9ff);
 }
