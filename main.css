@@ -52,6 +52,16 @@ a:hover {
 .fa {
     font-size: 50px;
     color: #000;
+    transition: opacity 0.5s ease, color 0.5s ease;
+}
+.fa:hover {
+    opacity: .6;
+}
+.icon p {
+    transition: color 0.5s ease;
+}
+.icon:hover p, .icon:hover i {
+    color: #007399;
 }
 /*Flip effect*/
 .flip-container {
@@ -232,19 +242,11 @@ a:hover {
 }
 
 
-/*Section defaults*/
-section {
-    padding: 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
 /*Intro section*/
 section#intro {
-    height: 100vh;
+    min-height: 100vh;
     padding: 5%;
+    overflow: hidden;
     position: relative;
     background-image: url(images/about.jpg)
 }
@@ -254,18 +256,34 @@ section#intro {
 }
 #intro-text {
     width: 40%;
-    height: 60vh;
+    min-height: 60vh;
     padding: 2%;
+    overflow: hidden;
     position: absolute;
     top: 20%;
     right: 5%;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
-    background-color: rgba(255,255,255,0.85);
+    background-color: rgba(255,255,255,0.95);
+}
+#intro-text p {
+    font-size: 1.25rem;
+    line-height: 1.35;
+    text-indent: 25px;
+}
+.fa-chevron-down {
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    color: #fff;
+    text-shadow: 4px 4px #000;
 }
 
 
 /*About section*/
 section#about {
+    padding: 5%;
     overflow: hidden;
     background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
 }
@@ -335,6 +353,7 @@ section#website {
     height: 100%;
     padding: 10%;
     position: relative;
+    background: linear-gradient(to bottom, #fff, #fff, #e6f9ff);
 }
 .site .site-text {
     height: 100%;
@@ -396,6 +415,14 @@ section#volunteer {
     padding: 7%;
     float: left;
 }
+.vol-icons {
+    width: 45%;
+    position: absolute;
+    bottom: 20%;
+    left: 2.5%;
+    text-align: center;
+    transition: visibility 1s linear;
+}
 .vol-img {
     width: 50%;
     height: 100%;
@@ -453,7 +480,7 @@ section#volunteer {
 .fade-in {
     animation: 4s fadeIn ease;
 }
-.slide p, .slide h2, .slide img {
+.vol-text {
     animation: 2.5s fadeIn ease-in;
 }
 
@@ -539,7 +566,7 @@ section#experience {
 section#art {
     padding: 5%;
     position: relative;
-    background: linear-gradient(#ccfff2, #ccf2ff, #ccd9ff);
+    background: linear-gradient(#fff, #ccfff2, #ccf2ff);
 }
 .column {
     width: 33vw;
