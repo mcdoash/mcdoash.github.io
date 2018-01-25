@@ -23,18 +23,27 @@
     <body>
         <!--Side navigation-->
         <nav id="side-nav">
-            <a href="#">About</a>
-            <a href="#">Experience</a>
+            <a href="#about">About</a>
             <div id="dropbtn">
-                <a href="#">Portfolio
+                <a href="#volunteer">Experience
                 <i class="fa fa-caret-down"></i>
                 </a>
                 <div id="drop-content">
-                    <a href="#">Art</a>
-                    <a href="#">Websites</a>
+                    <a href="#volunteer">Volunteer</a>
+                    <a href="#programming">Programming</a>
+                </div>
+            </div>
+            <div id="dropbtn">
+                <a href="#website">Portfolio
+                <i class="fa fa-caret-down"></i>
+                </a>
+                <div id="drop-content">
+                    <a href="#website">Websites</a>
+                    <a href="#art">Art</a>
                 </div>
             </div>
             <a href="#">Future Goals</a>
+            <a href="#">Contact</a>
         </nav>
         
         <!--Main content-->
@@ -62,6 +71,7 @@
                 </span>
                 <span id="current"><h1>Ash McDonald</h1></span>
                 <div id="nav-icons">
+                    <a href="resume.png" class="fa fa-file-pdf-o" download="Ashley_McDonald_Resume.pdf"></a>
                     <a href="https://github.com/mcdoash" target="_blank" class="fa fa-github"></a>
                     <a href="mailto:ashmc335@gmail.com" class="fa fa-envelope-o"></a>
                 </div>
@@ -160,8 +170,8 @@
             </section>
             
             
-            <!--Experience section-->
-            <section id="experience" link-title="experience: programming">
+            <!--Programming section-->
+            <section id="programming" link-title="experience: programming">
                 <div id="progress-bars">
                     <h3>HTML</h3>
                     <div class="bar">
@@ -351,6 +361,23 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         
         <script>
+            /*Anchor scrolling*/
+            $(document).ready(function(){
+                $("a").on('click', function(event){
+
+                    if(this.hash!==""){
+                        event.preventDefault();
+                        var hash = this.hash;
+
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top - $("#top-nav").outerHeight()
+                        }, 1500, function(){
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+            });
+            
             /*Side nav*/
             function openNav() {
                 document.getElementById("side-nav").style.width = "250px";
@@ -365,7 +392,7 @@
                 document.getElementById("openbtn").onclick = openNav;
             }
             
-            /*Website section scroll*/
+            /*Website section fade, top nav section*/
             $.fn.isInViewport = function() {
                 var elementTop = $(this).offset().top - $("#top-nav").outerHeight();
                 var elementBottom = elementTop + $(this).outerHeight();
@@ -377,7 +404,7 @@
                     return elementBottom > viewportTop && elementTop < viewportBottom;
                 }
                 else {
-                    return elementTop < viewportTop && elementTop < viewportBottom;
+                    return elementTop < (viewportTop + $(window).height()/4) && elementTop < viewportBottom;
                 }
             };
             $(window).on("resize scroll", function() {

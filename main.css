@@ -232,7 +232,7 @@ a:hover {
 }
 #drop-content {
     height: 0;
-    padding-left: 10%;
+    margin: 0 0 2% 10%;
     opacity: 0;
 }
 #dropbtn:hover #drop-content {
@@ -485,8 +485,8 @@ section#volunteer {
 }
 
 
-/*Experience section*/
-section#experience {
+/*Programming section*/
+section#programming {
     padding: 5%;
     overflow: hidden;
     background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
