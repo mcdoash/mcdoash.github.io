@@ -9,7 +9,7 @@
         <meta name="author" content="Ashley McDonald">
         
         <!--Fonts and icons-->
-        <link href="https://fonts.googleapis.com/css?family=Raleway&#124;Satisfy&#124;Lora" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:900&#124;Exo&#124;Source+Serif+Pro" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         
         <!--Tab title and icon-->
@@ -63,15 +63,15 @@
             
             
             <!--Top navigation-->
+            <span id="openbtn" class="fade-in-view" onclick="openNav()">
+                <div id="bar1"></div>
+                <div id="bar2"></div>
+                <div id="bar3"></div>
+            </span>
             <nav id="top-nav">
-                <span id="openbtn" onclick="openNav()">
-                    <div id="bar1"></div>
-                    <div id="bar2"></div>
-                    <div id="bar3"></div>
-                </span>
                 <span id="current"><h1>Ash McDonald</h1></span>
                 <div id="nav-icons">
-                    <a href="resume.png" class="fa fa-file-pdf-o" download="Ashley_McDonald_Resume.pdf"></a>
+                    <a href="Ashley-McDonald-Resume.pdf" class="fa fa-file-pdf-o" download="Ashley-McDonald-Resume.pdf"></a>
                     <a href="https://github.com/mcdoash" target="_blank" class="fa fa-github"></a>
                     <a href="mailto:ashmc335@gmail.com" class="fa fa-envelope-o"></a>
                 </div>
@@ -105,10 +105,14 @@
                     </div>
                 </div>
                 
-                <div id="circle-container">
-                    <div class="circle"><h3>Code</h3></div>
-                    <div class="circle"><h3>Art</h3></div>
-                    <div class="circle"><h3>Art</h3></div>
+                
+                <div id="skill-desc">
+                </div>
+                
+                <div id="skills-container">
+                    <div class="skill"><h3>Perseverance</h3></div>
+                    <div class="skill"><h3>Passion</h3></div>
+                    <div class="skill"><h3>Drive</h3></div>
                 </div>
             </section>
             
@@ -120,15 +124,15 @@
                     <div class="vol-text">
                         <h2>Central Programming Club</h2>
                         <br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare ullamcorper turpis id commodo. Proin sed lorem finibus, pulvinar ex et, euismod enim. Nulla quis facilisis magna. Fusce volutpat velit ante. Nullam fringilla euismod eleifend. Suspendisse convallis nunc tortor.</p>
+                        <p>The development of my school's first computer programming club has truly been a labor of love. We started as a group of four dedicated students and have since recruited two more people to our executive team. Our first meeting saw an astounding 50 people, and we've been holding a steady count of about 20 students ever since (the rest we lost to the demands of homework). I’ve committed over 300 hours thus far, from building and maintaining our website to planning and leading club activities. I've tackled projects such as an introduction to code for beginners, a <a href="https://repl.it/community/classrooms/35322" target="_blank">Turtle Graphics Tutorial</a>, and even helping to plan our own programming contest. What I'm most proud of, however, would be facing my fear of public speaking to help bring together people with a passion for code and introduce it others who'd like to learn.</p>
                         <div class="vol-icons">
                             <div class="icon">
                                 <i class="fa fa-clock-o" aria-hidden="true"></i>
                                 <p>300+ hours</p>
                             </div>
                             <div class="icon">
-                                <i class="fa fa-file-code-o" aria-hidden="true"></i>
-                                <p>25+ files</p>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <p>Leadership</p>
                             </div>
                             <div class="icon">
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
@@ -143,7 +147,21 @@
                     <div class="vol-text">
                         <h2>FutureWorks</h2>
                         <br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare ullamcorper turpis id commodo. Proin sed lorem finibus, pulvinar ex et, euismod enim. Nulla quis facilisis magna. Fusce volutpat velit ante. Nullam fringilla euismod eleifend. Suspendisse convallis nunc tortor.</p>
+                        <p>FutureWorks is a Junior Achievement company that produces the <i>London’s Little Picassos</i> magazine filled with art from London high school students. Besides having my art featured in the book, I also designed their website. I was able to extend my web development knowledge greatly; it was my first time working with jQuery and really getting into CSS animations. More than that, I learned how to ___.</p>
+                        <div class="vol-icons">
+                            <div class="icon">
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                <p>15+ hours</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-code" aria-hidden="true"></i>
+                                <p>Experience</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                <p>Hmm</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="vol-img" style="background-image: url(images/fw-website.png);"></div>
                 </div>
@@ -152,7 +170,7 @@
                     <div class="vol-text">
                         <h2>Music Editing</h2>
                         <br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare ullamcorper turpis id commodo. Proin sed lorem finibus, pulvinar ex et, euismod enim. Nulla quis facilisis magna. Fusce volutpat velit ante. Nullam fringilla euismod eleifend. Suspendisse convallis nunc tortor.</p>
+                        <p>My high school's most popular club is the Multi-Cultural club, which cheifly features several dance groups from around the world. I helped to edit the music for the K-Pop group, the biggest of them all. Through this, I had to learn how to use GarageBand, a program I had rarelt used before, to but and blend music so it fit seamlessly together.</p>
                     </div>
                     <div class="vol-img" style="background-image: url(images/pw-website.jpg);"></div>
                 </div>
@@ -211,8 +229,12 @@
                 </div>
                 
                 <div class="exp-box">
-                    <h3>HTML 500</h3>
-                    
+                    <h3>GitHub/git</h3>
+                    <p></p>
+                </div>
+                <div class="exp-box">
+                    <h3>Databases</h3>
+                    <p></p>
                 </div>
             </section>
             
@@ -221,13 +243,23 @@
             <section id="website" link-title="portfolio: websites">
                 
                 <div id="website-info">
-                    <div id="cpc-website" class="site">
+                    <div id="cpc-website" class="site fade-in-view">
                         <h2>
                             <a href="https://github.com/CentralProgramming/CentralProgramming.ca" target="_blank" class="fa fa-github-square"></a>
                             <a href="http://centralprogramming.ca/" target="_blank">Central Programming Club</a>
                         </h2>
 
-                        <p class="site-text">As my first big website, this was a great challenge. I had to learn about servers, back-end development, and how to google really, really well. I hit a lot of bumps along the way, but came out of it with enough knowlege and experience to go on to build other websites.</p>
+                        <div class="site-text">
+                            <p >As my first big website, this was a great challenge. I had to learn about servers, back-end development, and how to google really, really well. I hit a lot of bumps along the way, but came out of it with enough knowlege and experience to go on to build other websites. I still maintain this site weekly.</p>
+                            <br/>
+                            <p>Some more things I learned include:</p>
+                            <ul>
+                                <li>How to use git and GitHub</li>
+                                <li>How to use the command line</li>
+                                <li>How to set up web hosting</li>
+                                <li>How to finish a multi-page website in approx. 6 weeks with little experience</li>
+                            </ul>
+                        </div>
 
                         <div class="site-icons">
                             <div class="icon">
@@ -245,18 +277,18 @@
                         </div>
                     </div>
 
-                    <div id="fw-website" class="site">
+                    <div id="fw-website" class="site fade-in-view">
                         <h2>
                             <a href="https://github.com/mcdoash/FutureWorks-Website" target="_blank" class="fa fa-github-square"></a>
-                            FutureWorks
+                            <a href="https://mcdoash.github.io/FutureWorks-Website/" target="_blank">FutureWorks</a>
                         </h2>
 
-                        <p class="site-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare ullamcorper turpis id commodo. Proin sed lorem finibus, pulvinar ex et, euismod enim. Nulla quis facilisis magna. Fusce volutpat velit ante. Nullam fringilla euismod eleifend. Suspendisse convallis nunc tortor.</p>
+                        <p class="site-text">This website was an amazing experience. Having less content meant I was able to focus more on the little details and really polish some aspects. Smooth scrolling? Check? Neat progress bar that shows you how far you scrolled? Check. Fancy slideshow with changing text and background image? Double check. It was through the knowledge I gained making this site that I was able to build the one you're reading today.</p>
                         
                         <div class="site-icons">
                             <div class="icon">
                                 <i class="fa fa-code" aria-hidden="true"></i>
-                                <p>9000+ lines of code</p>
+                                <p>Learned jQuery</p>
                             </div>
                             <div class="icon">
                                 <i class="fa fa-file-code-o" aria-hidden="true"></i>
@@ -269,7 +301,7 @@
                         </div>
                     </div>
                 
-                    <div id="pw-website" class="site">
+                    <div id="pw-website" class="site fade-in-view">
                         <h2>
                             <a href="#" target="_blank" class="fa fa-github-square"></a>
                             This Website
@@ -392,15 +424,15 @@
                 document.getElementById("openbtn").onclick = openNav;
             }
             
-            /*Website section fade, top nav section*/
-            $.fn.isInViewport = function() {
+            /*Element fade when in view, top nav section text*/
+            $.fn.isInViewport = function(t) {
                 var elementTop = $(this).offset().top - $("#top-nav").outerHeight();
                 var elementBottom = elementTop + $(this).outerHeight();
                 
                 var viewportTop = $(window).scrollTop();
                 var viewportBottom = viewportTop + $(window).height();
                 
-                if($(this).hasClass("site")){
+                if($(this).hasClass("fade-in-view") || t==1){
                     return elementBottom > viewportTop && elementTop < viewportBottom;
                 }
                 else {
@@ -408,7 +440,7 @@
                 }
             };
             $(window).on("resize scroll", function() {
-                $(".site").each(function() {
+                $(".fade-in-view").each(function() {
                     if($(this).isInViewport()) {
                         $(this).addClass("show");
                     }
@@ -421,6 +453,15 @@
                         $("#current h1").text($(this).attr("link-title"));
                     }
                 });
+                if ($("#openbtn").hasClass("change")){
+                    $("#openbtn").css("display", "block")
+                }
+                else if($("#top-nav").isInViewport(1)) {
+                    $("#openbtn").css("display", "none")
+                }
+                else {
+                     $("#openbtn").css("display", "block")
+                }
             });
             
             
