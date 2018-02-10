@@ -54,6 +54,7 @@
                 <div id="name">
                     <h2 style="font-size: 3vw; color: #fff; text-shadow: 4px 4px #0086b3;">Hi, I'm</h2>
                     <h1 class="fade-in-view">&horbar;Ash McDonald&horbar;</h1>
+                    <p class="fade-in-view" style="width: 50%; margin-top: 1%; position: absolute; left: 25%; color: #fff;">I’m Ash(ley) McDonald, a high school senior in Ontario with a passion for problem solving and code. My love for programming prompted me and three of my fellow classmates to create a club in which we could explore our passion and help others do the same.</p>
                 </div>
                 <div id="sky"></div>
                 <div id="mountains"></div>
@@ -94,7 +95,7 @@
                             <li><p>decide on the best place to start</p></li>
                             <li><p>plan out each subsequent move in the most optimal order</p></li>
                         </ol>
-                        <p>This micro-problem-solving was a precursor for my love of more complex problems today. Whether that’s through programming contests, video game puzzles, or finding the most likely spot for a code-breaking typo, the challenge of a difficult problem never daunts me—in fact, it’s what spurs me forwards</p>
+                        <p>This micro-problem-solving was a precursor for my love of more complex problems today. Whether that’s through programming contests, video game puzzles, or finding the most likely spot for a code-breaking typo, the challenge of a difficult problem never daunts me—in fact, it’s what spurs me forwards.</p>
                     </div>
 
                     <div id="facts">
@@ -235,15 +236,51 @@
                 </div>
                 
                 <div class="exp-box">
-                    <h3>GitHub/git</h3>
-                    <p></p>
+                    <h3>Where I've learned:</h3>
+                    <ul>
+                        <li><p><b>Online</b></p>
+                            <ul>
+                                <li><p>Codeacademy</p></li>
+                                <li><p>W3Schools</p></li>
+                                <li><p>Random internet forums</p></li>
+                            </ul>
+                        </li>
+                        <li><p><b>In school</b></p>
+                            <ul>
+                                <li><p>Introduction to Computer Studies (ICS2O1)</p></li>
+                                <li><p>Computer and Information Science (ICS3U &amp; ICS4U)</p></li>
+                            </ul>
+                        </li>
+                        <li><p><b>Through workshops</b></p>
+                            <ul>
+                                <li><p>HTML 500 (2014)</p></li>
+                                <li><p>Mikutech Game Developer Outreach (2017)</p></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
                 <div class="exp-box">
-                    <h3>Databases</h3>
-                    <p></p>
+                    <h3>I have experience in:</h3>
+                    <ul>
+                        <li><p>git &amp; GitHub</p></li>
+                        <li><p>Using the command line</p></li>
+                        <li><p>Databases/phpMyAdmin</p></li>
+                        <li><p>Object oriented programming</p></li>
+                        <li><p>Solving programming problems on a team</p></li>
+                    </ul>
                 </div>
-                <iframe height="400px" width="100%" src="https://repl.it/@ashmc/ICS4U-Employee-Assignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-                <iframe height="400px" width="100%" src="https://repl.it/@ashmc/ICS4U-Blackjack?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                
+                
+                <h2 style="clear: both; margin: 50% 0 2%;">Some School Projects:</h2>
+                
+                <div class="exp-box" style="width: 48%; float: left;">
+                    <h3>First __ Assignment</h3><br/>
+                    <iframe height="400px" width="100%" src="https://repl.it/@ashmc/ICS4U-Employee-Assignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                </div>
+                <div class="exp-box" style="width: 48%;">
+                    <h3>Console Blackjack</h3><br/>
+                    <iframe height="400px" width="100%" src="https://repl.it/@ashmc/ICS4U-Blackjack?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                </div>
             </section>
             
             
@@ -262,10 +299,10 @@
                             <br/>
                             <p>Some more things I learned include:</p>
                             <ul>
-                                <li>How to use git and GitHub</li>
-                                <li>How to use the command line</li>
-                                <li>How to set up web hosting</li>
-                                <li>How to finish a multi-page website in approx. 6 weeks with little experience</li>
+                                <li><p>How to use git and GitHub</p></li>
+                                <li><p>How to use the command line</p></li>
+                                <li><p>How to set up web hosting</p></li>
+                                <li><p>How to finish a responsive, multi-page website in approx. 6 weeks with little experience</p></li>
                             </ul>
                         </div>
 
@@ -447,27 +484,32 @@
                     return elementTop < (viewportTop + $(window).height()/4) && elementTop < viewportBottom;
                 }
             };
-            $(window).on("resize scroll load", function() {
-                $(".fade-in-view").each(function() {
-                    if($(this).isInViewport()) {
+            $(window).on("resize scroll load", function(){
+                $(".fade-in-view").each(function(){
+                    if($(this).isInViewport()){
                         $(this).addClass("show");
                     }
-                    else {
+                    else{
                         $(this).removeClass("show");
                     }
                 });
-                $("section").each(function() {
-                    if($(this).isInViewport()) {
+                $("section").each(function(){
+                    if($(this).isInViewport()){
                         $("#current h1").text($(this).attr("link-title"));
+                    }
+                });
+                $(".stars").each(function(){
+                    if($("header").isInViewport() == false){
+                        $(this).css("animation", "none")    
                     }
                 });
                 if ($("#openbtn").hasClass("change")){
                     $("#openbtn").css("display", "block")
                 }
-                else if($("#top-nav").isInViewport(1)) {
+                else if($("#top-nav").isInViewport(1)){
                     $("#openbtn").css("display", "none")
                 }
-                else {
+                else{
                      $("#openbtn").css("display", "block")
                 }
             });

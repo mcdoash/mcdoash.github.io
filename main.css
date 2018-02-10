@@ -27,6 +27,7 @@ h2 {
     letter-spacing: 2px;
     line-height: 1.25;
     text-align: center;
+    color: #02537d;
 }
 h3 {
     font-size: 1.75rem;
@@ -34,15 +35,17 @@ h3 {
     letter-spacing: 2px;
     line-height: 1.25;
     text-align: center;
+    color: #02537d;
 }
 p {
     font-family: "Source Serif Pro";
     font-size: 1rem;
     line-height: 1.5;
+    color: #02537d;
 }
 a {
     text-decoration: none;
-    color: #000;
+    color: #02537d;
     transition: opacity 0.5s ease;
 }
 p a {
@@ -59,7 +62,7 @@ a:hover {
 /*Icons*/
 .fa {
     font-size: 50px;
-    color: #000;
+    color: #02537d;
     transition: opacity 0.5s ease, color 0.5s ease;
 }
 .fa:hover {
@@ -149,10 +152,10 @@ a:hover {
     display: block;
 }
 #openbtn.change div {
-    background-color: #a6a6a6;
+    background-color: #d9d9d9;
 }
 #openbtn.change:hover div {
-    background-color: #ddd;
+    background-color: #999;
 }
 .change #bar1 {
     -webkit-transform: rotate(-45deg) translate(-8px, 7px);
@@ -191,22 +194,22 @@ a:hover {
     padding-top: 5%;
     position: fixed;
     overflow-x: hidden;
-    z-index: 1;
+    z-index: 99;
     top: 0;
     left: 0;
-    background-color: #000;
+    background-color: #01334b;
     transition: 0.5s;
 }
 #side-nav a {
     padding: 3% 4% 3% 10%;
     display: block;
     font-size: 1.25rem;
-    color: #a6a6a6;
+    color: #f2f2f2;
     transition: 0.3s;
 }
 #side-nav a:hover, #side-nav a:hover .fa-caret-down, #dropbtn:hover  {
-    color: #f1f1f1;
-    background-color: #333333;
+    color: #fff;
+    background-color: #02567e;
 }
 #dropbtn {
     display: block;
@@ -215,7 +218,7 @@ a:hover {
 .fa-caret-down {
     margin-left: 5%;
     font-size: 1.25rem;
-    color: #a6a6a6;
+    color: #d9d9d9;
 }
 #drop-content {
     height: 0;
@@ -239,7 +242,7 @@ header {
     width: 100%;
     z-index: 3;
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 0;
 }
 .stars {
@@ -289,7 +292,7 @@ header {
 }
 #more {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 48%;
     z-index: 3;
     cursor: pointer;
@@ -489,11 +492,11 @@ section#volunteer {
     display: inline-block;
     cursor: pointer;
     border-radius: 50%;
-    background-color: #999;
+    background-color: #0398e2;
     transition: background-color 1s ease;
 }
 .active, .dot:hover {
-    background-color: #000;
+    background-color: #02537d;
 }
 .fade {
     animation: 2s fade ease;
@@ -551,6 +554,9 @@ section#programming {
     background-color: #00ace6;
     transition: opacity 1s ease;
 }
+.percent p {
+    color: #fff;
+}
 .percent:after {
     content: "";
     position: absolute;
@@ -581,6 +587,9 @@ section#programming {
 }
 .exp-box:hover {
     opacity: 0.75;
+}
+.exp-box ul {
+    margin-bottom: 2%;
 }
 
 
