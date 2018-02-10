@@ -49,17 +49,22 @@
         <!--Main content-->
         <div id="container">
             
-            <!--Intro section-->
-            <section id="intro" class="parallax" link-title="">
+            <!--Header-->
+            <header>
                 <div id="name">
-                    <h2 style="text-shadow: 4px 4px #fff;">Hi, I'm</h2>
-                    <h1>&horbar;Ash McDonald&horbar;</h1>
+                    <h2 style="font-size: 3vw; color: #fff; text-shadow: 4px 4px #0086b3;">Hi, I'm</h2>
+                    <h1 class="fade-in-view">&horbar;Ash McDonald&horbar;</h1>
                 </div>
-                <div id="intro-text">
-                    <p>I’m Ash(ley) McDonald, a high school senior in Ontario with a passion for problem solving and code. My love for programming prompted me and three of my fellow classmates to create a club in which we could explore our passion and help others do the same. Through that, I’ve learned valuable leadership skills, cultivated my knowledge of web design, and most importantly: made an impact in my school community.</p>
-                </div>
-                <a href="#about" class="fa fa-chevron-down" aria-hidden="true"></a>
-            </section>
+                <div id="sky"></div>
+                <div id="mountains"></div>
+                <div id="large-stars1" class="stars"></div>
+                <div id="large-stars2" class="stars"></div>
+                <div id="small-stars1" class="stars"></div>
+                <div id="small-stars2" class="stars"></div>
+                <div id="small-stars3" class="stars"></div>
+
+                <a id="more" href="#about" class="fa fa-chevron-down" aria-hidden="true"></a>
+            </header>
             
             
             <!--Top navigation-->
@@ -69,7 +74,7 @@
                 <div id="bar3"></div>
             </span>
             <nav id="top-nav">
-                <span id="current"><h1>Ash McDonald</h1></span>
+                <span id="current"><h1></h1></span>
                 <div id="nav-icons">
                     <a href="Ashley-McDonald-Resume.pdf" class="fa fa-file-pdf-o" download="Ashley-McDonald-Resume.pdf"></a>
                     <a href="https://github.com/mcdoash" target="_blank" class="fa fa-github"></a>
@@ -107,6 +112,7 @@
                 
                 
                 <div id="skill-desc">
+                    <h3 style="margin: 13% 0">Click a button on the right to learn more</h3>
                 </div>
                 
                 <div id="skills-container">
@@ -124,7 +130,7 @@
                     <div class="vol-text">
                         <h2>Central Programming Club</h2>
                         <br/>
-                        <p>The development of my school's first computer programming club has truly been a labor of love. We started as a group of four dedicated students and have since recruited two more people to our executive team. Our first meeting saw an astounding 50 people, and we've been holding a steady count of about 20 students ever since (the rest we lost to the demands of homework). I’ve committed over 300 hours thus far, from building and maintaining our website to planning and leading club activities. I've tackled projects such as an introduction to code for beginners, a <a href="https://repl.it/community/classrooms/35322" target="_blank">Turtle Graphics Tutorial</a>, and even helping to plan our own programming contest. What I'm most proud of, however, would be facing my fear of public speaking to help bring together people with a passion for code and introduce it others who'd like to learn.</p>
+                        <p>The development of my school's first computer programming club has truly been a labor of love. Our first meeting saw an astounding 50 people, and we've been holding a steady count of about 20 students ever since (the rest we lost to the demands of homework). I’ve committed over 300 hours thus far, from building and maintaining our website to planning and leading club activities. I've tackled projects such as an introduction to code for beginners, a <a href="https://repl.it/community/classrooms/35322" target="_blank">Turtle Graphics Tutorial</a>, and even helping to plan our own programming contest. What I'm most proud of, however, would be facing my fear of public speaking to help bring together people with a passion for code and introduce it others who'd like to learn.</p>
                         <div class="vol-icons">
                             <div class="icon">
                                 <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -236,6 +242,8 @@
                     <h3>Databases</h3>
                     <p></p>
                 </div>
+                <iframe height="400px" width="100%" src="https://repl.it/@ashmc/ICS4U-Employee-Assignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                <iframe height="400px" width="100%" src="https://repl.it/@ashmc/ICS4U-Blackjack?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
             </section>
             
             
@@ -439,7 +447,7 @@
                     return elementTop < (viewportTop + $(window).height()/4) && elementTop < viewportBottom;
                 }
             };
-            $(window).on("resize scroll", function() {
+            $(window).on("resize scroll load", function() {
                 $(".fade-in-view").each(function() {
                     if($(this).isInViewport()) {
                         $(this).addClass("show");

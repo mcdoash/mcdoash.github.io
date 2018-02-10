@@ -11,12 +11,13 @@ div#container {
 }
 
 h1 {
-    font-size: 4.5vw;
+    font-size: 5vw;
     font-family: "Montserrat";
     font-weight: 900;
     line-height: 1.25;
     text-align: center;
-    text-shadow: 4px 4px #fff;
+    color: #fff;
+    text-shadow: 4px 4px #0086b3;
 }
 h2 {
     font-size: 2.25rem;
@@ -70,44 +71,6 @@ a:hover {
 .icon:hover p, .icon:hover i {
     color: #007399;
 }
-/*Flip effect*/
-.flip-container {
-    position: relative;
-    cursor: pointer;
-    perspective: 800px;
-    -webkit-perspective: 800px;
-}
-.flip-faces {
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    position: absolute;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    transition: transform 2s;
-    -webkit-transition: transform 2s;
-}
-.flipped {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-}
-.front, .back {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    position: absolute;
-    display: block;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-.front:hover, .back:hover {
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
-}
-.back {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-}
 /*Flex*/
 .flex-container {
     display: -webkit-flex;
@@ -131,6 +94,16 @@ a:hover {
 @keyframes fadeOut {
     0% {opacity: 1;}
     100% {opacity: 0;}
+}
+@keyframes twinkleDeep {
+    0% {opacity: 1;}
+    50% {opacity: 0.25;}
+    100% {opacity: 1;}
+}
+@keyframes twinkleLight {
+    0% {opacity: 1;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
 }
 .show {
     opacity: 1;
@@ -256,44 +229,75 @@ a:hover {
 }
 
 
-/*Intro section*/
-section#intro {
-    min-height: 100vh;
-    padding: 5%;
+/*Header*/
+header { 
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url(images/about.jpg);
 }
 #name {
-    width: 50%;
-}
-#intro-text {
-    width: 40%;
-    padding: 2%;
-    overflow: hidden;
+    width: 100%;
+    z-index: 3;
     position: absolute;
-    top: 20%;
-    right: 5%;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
-    background-color: rgba(255,255,255,0.95);
-}
-#intro-text p {
-    font-size: 1.25rem;
-    line-height: 1.35;
-    text-indent: 25px;
-}
-.fa-chevron-down {
-    width: 50%;
-    margin-left: 2.5%;
-    text-align: center;
-    position: absolute;
-    bottom: 5%;
+    top: 25%;
     left: 0;
+}
+.stars {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-size: 1000px 500px;
+    background-repeat: repeat;
+}
+#sky {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(to bottom, #040429, #0086b3);
+}
+#mountains {
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    background-size: cover;
+    background-image: url(images/header/mountains.png);
+}
+#large-stars1 {
+    background-image: url(images/header/large-stars1.png);
+    animation: 4s twinkleDeep ease infinite;
+}
+#large-stars2 {
+    background-image: url(images/header/large-stars2.png);
+    animation: 6s twinkleLight ease infinite;
+} 
+#small-stars1 {
+    background-image: url(images/header/small-stars1.png);
+    animation: 3s twinkleLight ease infinite;
+} 
+#small-stars2 {
+    background-image: url(images/header/small-stars2.png);
+    animation: 6s twinkleDeep ease infinite;
+} 
+#small-stars3 {
+    background-image: url(images/header/small-stars3.png);
+    animation: 4s twinkleDeep ease infinite;
+}
+#more {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    z-index: 3;
+    cursor: pointer;
+    font-size: 3rem;
+    text-align: center;
     color: #fff;
-    text-shadow: 4px 4px #000;
+    text-shadow: 4px 4px #0086b3;
+    animation: 3.5s twinkleLight ease infinite;
 }
 
 
@@ -333,7 +337,7 @@ section#about {
 }
 #skill-desc {
     width: 65%;
-    min-height: 500px;
+    min-height: 250px;
     margin: 5% 0 0;
     float: left;
     border: 2px solid #99e6ff;
@@ -347,7 +351,7 @@ section#about {
 }
 .skill {
     width: 100%;
-    margin: 0 5% 8%;
+    margin: 0 5% 7%;
     padding: 3%;
     display: block;
     text-shadow: 4px 4px #fff;
