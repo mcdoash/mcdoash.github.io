@@ -270,26 +270,22 @@ header {
     background-size: cover;
     background-image: url(images/header/mountains.png);
 }
-#large-stars1 {
-    background-image: url(images/header/large-stars1.png);
-    animation: 4s twinkleDeep ease infinite;
+#stars1 {
+    background-image: url(images/header/stars1.png);
+    animation: 5.25s twinkleLight ease infinite;
 }
-#large-stars2 {
-    background-image: url(images/header/large-stars2.png);
-    animation: 6s twinkleLight ease infinite;
+#stars2 {
+    background-image: url(images/header/stars2.png);
+    animation: 4.5s twinkleDeep ease infinite;
 } 
-#small-stars1 {
-    background-image: url(images/header/small-stars1.png);
-    animation: 3s twinkleLight ease infinite;
+#stars3 {
+    background-image: url(images/header/stars3.png);
+    animation: 3.3s twinkleDeep ease infinite;
 } 
-#small-stars2 {
-    background-image: url(images/header/small-stars2.png);
-    animation: 6s twinkleDeep ease infinite;
+#stars4 {
+    background-image: url(images/header/stars4.png);
+    animation: 2.15s twinkleDeep ease infinite;
 } 
-#small-stars3 {
-    background-image: url(images/header/small-stars3.png);
-    animation: 4s twinkleDeep ease infinite;
-}
 #more {
     position: absolute;
     top: 55%;
