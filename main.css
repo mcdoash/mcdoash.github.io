@@ -98,6 +98,12 @@ a:hover {
     0% {opacity: 1;}
     100% {opacity: 0;}
 }
+@keyframes cycleColour {
+    0% {color: #ccd9ff;}
+    25% {color: #ccf2ff;}
+    50% {color: #ccffe6;}
+    75% {color: #ccf2ff;}
+}
 @keyframes twinkleDeep {
     0% {opacity: 1;}
     50% {opacity: 0.25;}
@@ -235,8 +241,9 @@ a:hover {
 /*Header*/
 header { 
     width: 100vw;
-    height: 100vh;
+    min-height: 125vh;
     overflow: hidden;
+    background: linear-gradient(to bottom, #040429, #0086b3);
 }
 #name {
     width: 100%;
@@ -244,6 +251,9 @@ header {
     position: absolute;
     top: 20%;
     left: 0;
+}
+#name h1 {
+    animation: 5s cycleColour linear infinite;
 }
 .stars {
     width: 100%;
@@ -255,12 +265,6 @@ header {
     background-size: 1000px 500px;
     background-repeat: repeat;
 }
-#sky {
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background: linear-gradient(to bottom, #040429, #0086b3);
-}
 #mountains {
     width: 100%;
     height: 30%;
@@ -269,6 +273,23 @@ header {
     z-index: 2;
     background-size: cover;
     background-image: url(images/header/mountains.png);
+}
+#mountain-fade {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    background:  linear-gradient(to bottom, rgba(4, 4, 41, 0), rgba(4, 4, 41, 1));
+}
+#intro-text {
+    height: 25vh;
+    padding: 4% 3% 3%;
+    float: l;
+    position: absolute; 
+    top: 100vh;
+    color: #fff; 
+    text-overflow: ellipsis;
+    background: linear-gradient(to bottom , #040429, #006080); 
 }
 #stars1 {
     background-image: url(images/header/stars1.png);
@@ -326,12 +347,12 @@ section#about {
     border-radius: 20px;
     background-color: #e6f9ff;
     background: linear-gradient(to bottom right, #e6f9ff, #fff);
-    transition: opacity 0.5s ease;
 }
 #facts li {
     margin: 2% 0;
+    transition: opacity 0.5s ease;
 }
-#facts li:hover, .circle:hover {
+#facts li:hover {
     opacity: 0.60;
 }
 #skill-desc {
@@ -353,39 +374,36 @@ section#about {
     margin: 0 5% 7%;
     padding: 3%;
     display: block;
+    cursor: pointer;
     text-shadow: 4px 4px #fff;
     border: 2px solid #99e6ff;
     background: linear-gradient(to bottom right, #ccfff2, #ccf2ff);
-    transition: opacity 0.5s ease;
+    transition: box-shadow 1s ease;
 }
 .skill:hover {
-    opacity: 0.6;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
 }
 
 
 /*Website section*/
 section#website {
-    height: 300vh;
     overflow: hidden;
-}
-#website-info {
-    width: 50%;
-    overflow: hidden;
-    float: left;
 }
 .site {
     width: 100%;
-    height: 100%;
-    padding: 10%;
+    min-height: 50vh;
     position: relative;
+    overflow: hidden;
     background: linear-gradient(to bottom, #fff, #fff, #e6f9ff);
 }
-.site .site-text {
+.site-text {
     height: 100%;
-    margin: 10% 0 25%;
+    width: 50%;
+    padding: 5% 5% 25%;
+    float: left;
 }
 .site-icons {
-    width: 95%;
+    width: 50%;
     position: absolute;
     bottom: 15%;
     left: 2.5%;
@@ -405,18 +423,16 @@ section#website {
     display: inline-block;
     line-height: 50px;
 }
-#website-images {
-    width: 50%;
-    height: 100vh;
-    float: right;
-}
 .site-img {
-    width: 100%;
+    width: 50%;
     height: 100%;
+    float: left;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border: 10px solid red;
 }
+
 
 /*Volunteer section*/
 section#volunteer {
@@ -525,7 +541,7 @@ section#programming {
 .bar {
     width: 100%;
     height: 20px;
-    margin: 1% 0 5%;
+    margin: 1% 0 10%;
     position: relative;
     border-radius: 20px;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
@@ -579,10 +595,10 @@ section#programming {
     border-radius: 20px;
     background-color: #0099cc;
     background: linear-gradient(to bottom right, #e6f9ff, #fff);
-    transition: opacity 0.5s ease;
+    transition: box-shadow 1s ease;
 }
 .exp-box:hover {
-    opacity: 0.75;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
 }
 .exp-box ul {
     margin-bottom: 2%;
