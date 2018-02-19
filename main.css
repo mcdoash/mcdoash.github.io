@@ -387,28 +387,27 @@ section#website {
 }
 .site {
     width: 100%;
-    min-height: 50vh;
     position: relative;
     overflow: hidden;
     background: linear-gradient(to bottom, #fff, #fff, #e6f9ff);
 }
 .site-text {
-    height: 100%;
     width: 50%;
-    padding: 5% 5% 25%;
-    float: left;
+    height: 100%;
+    padding: 5% 5% 10%;
+}
+.site-text h2 {
+    margin-bottom: 5%;
 }
 .site-icons {
-    width: 50%;
-    position: absolute;
-    bottom: 15%;
-    left: 2.5%;
-    text-align: center;
+    width: 110%;
+    margin-top: 10%;
     transition: visibility 1s linear;
 }
 .icon {
-    margin: 2%;
+    margin: 0 2% 2% 0;
     display: inline-block;
+    text-align: center;
 }
 .icon .fa {
     display: inline-block;
@@ -421,12 +420,9 @@ section#website {
 }
 .site-img {
     width: 50%;
-    height: 100%;
-    float: left;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border: 10px solid red;
 }
 
 
