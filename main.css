@@ -381,51 +381,6 @@ section#about {
 }
 
 
-/*Website section*/
-section#website {
-    overflow: hidden;
-}
-.site {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(to bottom, #fff, #fff, #e6f9ff);
-}
-.site-text {
-    width: 50%;
-    height: 100%;
-    padding: 5% 5% 10%;
-}
-.site-text h2 {
-    margin-bottom: 5%;
-}
-.site-icons {
-    width: 110%;
-    margin-top: 10%;
-    transition: visibility 1s linear;
-}
-.icon {
-    margin: 0 2% 2% 0;
-    display: inline-block;
-    text-align: center;
-}
-.icon .fa {
-    display: inline-block;
-    font-size: 50px;
-    vertical-align: bottom;
-}
-.icon p {
-    display: inline-block;
-    line-height: 50px;
-}
-.site-img {
-    width: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-
 /*Volunteer section*/
 section#volunteer {
     position: relative;
@@ -594,6 +549,51 @@ section#programming {
 }
 .exp-box ul {
     margin-bottom: 2%;
+}
+
+
+/*Website section*/
+section#website {
+    overflow: hidden;
+}
+.site {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #fff, #fff, #e6f9ff);
+}
+.site-text {
+    width: 50%;
+    height: 100%;
+    padding: 5% 5% 10%;
+}
+.site-text h2 {
+    margin-bottom: 5%;
+}
+.site-icons {
+    width: 110%;
+    margin-top: 10%;
+    transition: visibility 1s linear;
+}
+.icon {
+    margin: 0 2% 2% 0;
+    display: inline-block;
+    text-align: center;
+}
+.icon .fa {
+    display: inline-block;
+    font-size: 50px;
+    vertical-align: bottom;
+}
+.icon p {
+    display: inline-block;
+    line-height: 50px;
+}
+.site-img {
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 
