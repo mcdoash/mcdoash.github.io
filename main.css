@@ -352,34 +352,6 @@ section#about {
 #facts li:hover {
     opacity: 0.60;
 }
-#skill-desc {
-    width: 65%;
-    min-height: 250px;
-    margin: 5% 0 0;
-    float: left;
-    border: 2px solid #99e6ff;
-    background: linear-gradient(to bottom, #e6f9ff, #fff);
-}
-#skills-container {
-    width: 30%;
-    margin-top: 5%;
-    float: right;
-    text-align: center;
-}
-.skill {
-    width: 100%;
-    margin: 0 5% 7%;
-    padding: 3%;
-    display: block;
-    cursor: pointer;
-    text-shadow: 4px 4px #fff;
-    border: 2px solid #99e6ff;
-    background: linear-gradient(to bottom right, #ccfff2, #ccf2ff);
-    transition: box-shadow 1s ease;
-}
-.skill:hover {
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
-}
 
 
 /*Volunteer section*/
@@ -638,20 +610,42 @@ section#art {
     opacity: 1;
 }
 #modal {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: auto;
-    position: fixed;
-    z-index: 99;
+    z-index: 100;
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+    background-color: rgba(1, 51, 75,0.85);
 }
 #modal-img {
-    width: 80%;
-    margin: auto;
-    display: block;
-    margin: auto;
+    height: 80%;
+    margin-top: 2%;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+}
+#modal-img:hover {
+}
+#modal #caption {
+    width: 100%;
+    padding: 2%;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+}
+#modal span#close {
+    z-index: 100;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+    font-size: 75px;
+    color: #99e6ff;
+    transition: color 0.5s;
+}
+#modal span#close:hover {
+    color: #00bfff;
 }

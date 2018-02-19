@@ -122,22 +122,11 @@ ASH MCDONALD
                         <ul>
                             <li><p>Nintendo enthusiast</p></li>
                             <li><p>Self-taught in web development</p></li>
-                            <li><p>Firm believer in equity</p></li>
                             <li><p>Taken every art and computer science course available in high school</p></li>
                             <li><p>Actually enjoys writting essays</p></li>
-                            <li><p>Made this website in a few weeks while studying for exams</p></li>
+                            <li><p>Really, really excited about the Dev Degree program with Carleton and Shopify</p></li>
                         </ul>
                     </div>
-                </div>
-                
-                <div id="skill-desc">
-                    <h3 style="margin: 13% 0">Click a button on the right to learn more</h3>
-                </div>
-                
-                <div id="skills-container">
-                    <div class="skill"><h3>Perseverance</h3></div>
-                    <div class="skill"><h3>Passion</h3></div>
-                    <div class="skill"><h3>Drive</h3></div>
                 </div>
             </section>
             
@@ -446,9 +435,9 @@ ASH MCDONALD
                 </div>
                 
                 <div id="modal">
-                    <span class="close">&times;</span>
+                    <span id="close">&times;</span>
                     <img id="modal-img">
-                    <div id="modal-caption"></div>
+                    <h3 id="caption"></h3>
                 </div>
             </section>
         </div>
@@ -565,19 +554,20 @@ ASH MCDONALD
                 dots[slideIndex-1].className += " active";
             }
             
-            /*Art modal
-            var modal = document.getElementById("modal");
-            var img = $('.image');
-            var modalImg = $("#modal-img");
-            var caption = document.getElementById("modal-caption");
-            
-            $('.image').click(function(){
-                modal.style.display = "block";
-                var newSrc = this.src;
-                modalImg.attr('src', newSrc);
-                caption.innerHTML = this.alt;
+            /*Art modal*/
+            $(".art").click(function(){
+                $("#modal-img").attr("src", $(this).children("img").attr("src"));
+                $("#caption").text($(this).children(".title").text());
+                $("#modal").fadeIn(1000);
             });
-            */
+            $('#close').click(function(){
+                $("#modal").fadeOut(1000);
+            });
+            window.onclick = function(event) {
+                if(event.target == modal) {
+                    $("#modal").fadeOut(1000);
+                }
+            }
         </script>
     </body>
     
