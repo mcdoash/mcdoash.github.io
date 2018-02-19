@@ -88,7 +88,7 @@
                 <div class="flex-container">
                     <div id="story">
                         <h2>Who I am</h2><br/>
-                        <p>When I was a kid I loved unpicking knots. Unravelling particularly complex ones always needed an action plan:</p>
+                        <p>When I was a kid, I loved unpicking knots. Unravelling particularly complex ones always needed an action plan:</p>
                         <ol>
                             <li><p>understand how the knot works/which parts to pull</p></li>
                             <li><p>decide on the best place to start</p></li>
@@ -176,7 +176,7 @@
                     <div class="vol-text">
                         <h2>Music Editing</h2>
                         <br/>
-                        <p>My high school's most popular club is the Multi-Cultural club, which cheifly features several dance groups from around the world. I helped to edit the music for the K-Pop group, the biggest of them all. Through this, I had to learn how to use GarageBand, a program I had rarelt used before, to but and blend music so it fit seamlessly together.</p>
+                        <p>My high school's most popular club is the Multi-Cultural club, which chiefly features several dance groups from around the world. I helped to edit the music for the K-Pop group, the biggest of them all. Through this, I had to learn how to use GarageBand, a program I had rarely used before, to cut and blend music so it fit seamlessly together.</p>
                     </div>
                     <div class="vol-img" style="background-image: url(images/pw-website.jpg);"></div>
                 </div>
@@ -229,8 +229,8 @@
 
                     <h3>SQL</h3>
                     <div class="bar">
-                        <span class="percent"><p>30%</p></span>
-                        <div class="progress" style="width: 30%;"></div>
+                        <span class="percent"><p>20%</p></span>
+                        <div class="progress" style="width: 20%;"></div>
                     </div>
                 </div>
                 
@@ -328,7 +328,7 @@
                             <a href="https://mcdoash.github.io/FutureWorks-Website/" target="_blank">FutureWorks</a>
                         </h2>
 
-                        <p>This website was an amazing experience. Having less content meant I was able to focus more on the little details and really polish some aspects. Smooth scrolling? Check? Neat progress bar that shows you how far you scrolled? Check. Fancy slideshow with changing text and background image? Double check. It was through the knowledge I gained making this site that I was able to build the one you're reading today.</p>
+                        <p>This website was an amazing experience. Having less content meant I was able to focus more on the little details and really polish some aspects. Smooth scrolling? Check? Neat progress bar that shows you how far you've scrolled? Check. Fancy slideshow with changing text and background images? Double check. It was through the knowledge I gained making this site that I was able to build the one you're looking at today.</p>
 
                         <div class="site-icons">
                             <div class="icon">
@@ -507,9 +507,7 @@
                 else{
                      $("#openbtn").css("display", "block")
                 }
-                var headerHeight = $("#intro-text").height() + $(window).height();
-                console.log($("#intro-text").height() + " " + $(window).height() + " " + headerHeight)
-                $("header").css("height", headerHeight);
+                $("header").css("height", $("#intro-text").outerHeight() + $(window).outerHeight());
             });
             
             

@@ -241,7 +241,6 @@ a:hover {
 /*Header*/
 header { 
     width: 100vw;
-    min-height: 125vh;
     overflow: hidden;
     background: linear-gradient(to bottom, #040429, #0086b3);
 }
@@ -282,13 +281,10 @@ header {
     background:  linear-gradient(to bottom, rgba(4, 4, 41, 0), rgba(4, 4, 41, 1));
 }
 #intro-text {
-    height: 25vh;
     padding: 4% 3% 3%;
-    float: l;
     position: absolute; 
     top: 100vh;
     color: #fff; 
-    text-overflow: ellipsis;
     background: linear-gradient(to bottom , #040429, #006080); 
 }
 #stars1 {
