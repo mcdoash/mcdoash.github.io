@@ -1,20 +1,39 @@
+<!--
+HELLO DEV DEGREE PEOPLE (or other interested folk),
+
+    This site was made quickly and 
+    passionately for my Dev Degree 
+    application. It's my third
+    website to date and I'm almost
+    entirely self-taught.
+
+    This is a showcase of what I've 
+    accomplished thus far and an 
+    indication of what I can do in 
+    the future, with a little guidance.
+
+    I hope you enjoy your stay,
+
+ASH MCDONALD
+-->
+
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
+        <!--Tab title and icon-->
+        <title>Ash McDonald</title>
+        <link rel="shortcut icon" href="images/logo.png">
+        
         <!--Meta data-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
+        <meta name="description" content="High school student. Problem solver. Programming enthusiast. Really excited about Shopify & Carleton's Dev Degree program.">
         <meta name="keywords" content="">
-        <meta name="description" content="">
         <meta name="author" content="Ashley McDonald">
         
         <!--Fonts and icons-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:900&#124;Exo&#124;Source+Serif+Pro" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        
-        <!--Tab title and icon-->
-        <title>Ash McDonald</title>
-        <link rel="shortcut icon" href="images/logo.png">
         
         <!--Stylesheet-->
         <link rel="stylesheet" href="main.css">
@@ -43,6 +62,7 @@
                 </div>
             </div>
         </nav>
+        
         
         <!--Main content-->
         <div id="container">
@@ -109,7 +129,6 @@
                         </ul>
                     </div>
                 </div>
-                
                 
                 <div id="skill-desc">
                     <h3 style="margin: 13% 0">Click a button on the right to learn more</h3>
@@ -292,7 +311,7 @@
                             <a href="http://centralprogramming.ca/" target="_blank">Central Programming Club</a>
                         </h2>
 
-                        <p>As my first big website, this was a great challenge. I had to learn about servers, back-end development, and how to google really, really well. I hit a lot of bumps along the way, but came out of it with enough knowlege and experience to go on to build other websites. I still maintain this site weekly.</p>
+                        <p>As my first big website, this was a great challenge. I had to learn about servers, a bit of back-end development, and how to google really, really well. I hit a lot of bumps along the way, but came out of it with enough knowlege and experience to go on to build other websites. I still maintain this site weekly.</p>
                             <br/>
                         <p>Some more things I learned include:</p>
                         <ul>
@@ -356,7 +375,7 @@
                             This Website
                         </h2>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare ullamcorper turpis id commodo. Proin sed lorem finibus, pulvinar ex et, euismod enim. Nulla quis facilisis magna. Fusce volutpat velit ante. Nullam fringilla euismod eleifend. Suspendisse convallis nunc tortor.</p>
+                        <p>This is something I'm reallt proud of. It's a collision of all the knowlege I've gained this far to create both an experience and design I'm happy with. That being said, there's still so much to improve on and much more learning to be done.</p>
 
                         <div class="site-icons">
                             <div class="icon">
@@ -374,7 +393,7 @@
                         </div>
                     </div>
 
-                    <div class="site-img parallax" style="background-image: url(images/pw-website.jpg);"></div>
+                    <div class="site-img parallax" style="background-image: url(images/pw-website.png); background-position: bottom;"></div>
                 </div>
             </section>
             
@@ -435,6 +454,7 @@
         </div>
         
         
+        <!--Javascript-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         
         <script>
@@ -463,6 +483,9 @@
                 document.getElementById("openbtn").onclick = closeNav;
             }
             function closeNav() {
+                if($(window).scrollTop()<$("header").height()){
+                    $("#openbtn").css("display", "none");
+                }
                 document.getElementById("side-nav").style.width = "0";
                 document.getElementById("container").style.marginLeft = "0";
                 document.getElementById("openbtn").classList.remove("change");
@@ -501,11 +524,11 @@
                 if ($("#openbtn").hasClass("change")){
                     $("#openbtn").css("display", "block");
                 }
-                else if($("#top-nav").isInViewport(1)){
+                else if($(window).scrollTop()<$("header").height()){
                     $("#openbtn").css("display", "none");
                 }
                 else{
-                     $("#openbtn").css("display", "block")
+                     $("#openbtn").css("display", "block");
                 }
                 $("header").css("height", $("#intro-text").outerHeight() + $(window).outerHeight());
             });

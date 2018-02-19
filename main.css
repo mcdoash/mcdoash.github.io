@@ -241,6 +241,7 @@ a:hover {
 /*Header*/
 header { 
     width: 100vw;
+    min-height: 100vh;
     overflow: hidden;
     background: linear-gradient(to bottom, #040429, #0086b3);
 }
@@ -565,7 +566,7 @@ section#website {
 .site-text {
     width: 50%;
     height: 100%;
-    padding: 5% 5% 10%;
+    padding: 5% 5% 7%;
 }
 .site-text h2 {
     margin-bottom: 5%;
