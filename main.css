@@ -79,11 +79,8 @@ a:hover {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    flex-wrap: wrap;
     overflow: hidden;
-}
-.flex-item {
-    margin: 1% auto;
-    text-align: center;
 }
 /*Animations*/
 @keyframes fade {
@@ -326,6 +323,7 @@ section#about {
 }
 #story {
     width: 50%;
+    margin-bottom: 5%;
     padding: 2%;
     float: left;
     text-indent: 25px;
@@ -335,11 +333,11 @@ section#about {
     text-indent: 5px;
 }
 #facts {
-    width: 50%;
+    width: 45%;
     min-height: 400px;
     margin: 0 0 0 5%;
     padding: 2%;
-    float: right;
+    float: left;
     border: 2px solid #99e6ff;
     border-radius: 20px;
     background-color: #e6f9ff;
@@ -360,8 +358,7 @@ section#volunteer {
     overflow: hidden;
 }
 .slide {    
-    width: 100%;
-    height: 130vh;
+    width: 100vw;
     display: none;
     transition: 0.5s;
     background: linear-gradient(to bottom, #fff, #fff, #e6f9ff);
@@ -372,17 +369,14 @@ section#volunteer {
     float: left;
 }
 .vol-icons {
-    width: 45%;
-    position: absolute;
-    bottom: 10%;
-    left: 2.5%;
+    width: 110%;
+    margin-top: 7%;;
     text-align: center;
     transition: visibility 1s linear;
 }
 .vol-img {
     width: 50%;
-    height: 100%;
-    float: right;
+    float: left;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -506,11 +500,9 @@ section#programming {
     opacity: 1;
 }
 .exp-box {
-    width: 55%;
-    min-height: 200px;
+    width: 100%;
     padding: 2%;
-    margin-bottom: 3%;
-    float: right;
+    margin-bottom: 5%;
     border: 2px solid #99e6ff;
     border-radius: 20px;
     background-color: #0099cc;
@@ -526,9 +518,6 @@ section#programming {
 
 
 /*Website section*/
-section#website {
-    overflow: hidden;
-}
 .site {
     width: 100%;
     position: relative;
@@ -537,7 +526,6 @@ section#website {
 }
 .site-text {
     width: 50%;
-    height: 100%;
     padding: 5% 5% 7%;
 }
 .site-text h2 {
@@ -576,13 +564,9 @@ section#art {
     position: relative;
     background: linear-gradient(#fff, #ccfff2, #ccf2ff);
 }
-.column {
-    width: 33vw;
-    background-color: #fff;
-}
 .art {
-    width: 100%;
-    height: 33vw;
+    width: 30vw;
+    height: 30vw;
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -648,4 +632,47 @@ section#art {
 }
 #modal span#close:hover {
     color: #00bfff;
+}
+
+
+/*Media queries*/
+@media only screen and (max-width: 1000px) {
+    .col2 {
+        width: 100%!important;
+    }
+    /*Volunteer section*/
+    #dot-holder {
+        left: 50%;
+    }
+    .prev, .next {
+        top: 20%;
+    }
+    .vol-text {
+        padding: 12%;
+    }
+    /*Experience section*/
+    .bar {
+        margin: 1% 0 5%;
+    }
+    /*Art section*/
+    .art {
+        width: 45vw;
+        height: 45vw;
+    }
+    #modal-img {
+        width: 80%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media only screen and (max-width: 600px){
+    /*Art section*/
+    .art {
+        width: 95vw;
+        height: 95vw;
+        margin-bottom: 5%;
+    }
 }
