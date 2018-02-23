@@ -76,8 +76,9 @@ a:hover {
 }
 /*Flex*/
 .flex {
-    display: -webkit-flex;
+    display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
@@ -87,7 +88,15 @@ a:hover {
     from {opacity: 0.6;}
     to {opacity: 1;}
 }
+@-webkit-keyframes fade {
+    from {opacity: 0.6;}
+    to {opacity: 1;}
+}
 @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@-webkit-keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
@@ -95,7 +104,17 @@ a:hover {
     0% {opacity: 1;}
     100% {opacity: 0;}
 }
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
 @keyframes cycleColour {
+    0% {color: #ccd9ff;}
+    25% {color: #ccf2ff;}
+    50% {color: #ccffe6;}
+    75% {color: #ccf2ff;}
+}
+@-webkit-keyframes cycleColour {
     0% {color: #ccd9ff;}
     25% {color: #ccf2ff;}
     50% {color: #ccffe6;}
@@ -106,7 +125,17 @@ a:hover {
     50% {opacity: 0.25;}
     100% {opacity: 1;}
 }
+@-webkit-keyframes twinkleDeep {
+    0% {opacity: 1;}
+    50% {opacity: 0.25;}
+    100% {opacity: 1;}
+}
 @keyframes twinkleLight {
+    0% {opacity: 1;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+@-webkit-keyframes twinkleLight {
     0% {opacity: 1;}
     50% {opacity: 0.5;}
     100% {opacity: 1;}
@@ -114,6 +143,7 @@ a:hover {
 .show {
     opacity: 1;
     transition: visibility 1s linear;
+    -webkit-animation: 2.5s fadeIn ease-in;
     animation: 2.5s fadeIn ease-in;
 }
 
@@ -163,6 +193,7 @@ a:hover {
 }
 .change #bar1 {
     -webkit-transform: rotate(-45deg) translate(-8px, 7px);
+    -ms-transform: rotate(-45deg) translate(-8px, 7px);
     transform: rotate(-45deg) translate(-8px, 7px);
 }
 .change #bar2 {
@@ -170,6 +201,7 @@ a:hover {
 }
 .change #bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    -ms-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
 #current h1 {
@@ -252,6 +284,7 @@ header {
     left: 0;
 }
 #name h1 {
+    -webkit-animation: 5s cycleColour linear infinite;
     animation: 5s cycleColour linear infinite;
 }
 .stars {
@@ -289,18 +322,22 @@ header {
 }
 #stars1 {
     background-image: url(images/header/stars1.png);
+    -webkit-animation: 5.25s twinkleLight ease infinite;
     animation: 5.25s twinkleLight ease infinite;
 }
 #stars2 {
     background-image: url(images/header/stars2.png);
+    -webkit-animation: 4.5s twinkleDeep ease infinite;
     animation: 4.5s twinkleDeep ease infinite;
 } 
 #stars3 {
     background-image: url(images/header/stars3.png);
+    -webkit-animation: 3.3s twinkleDeep ease infinite;
     animation: 3.3s twinkleDeep ease infinite;
 } 
 #stars4 {
     background-image: url(images/header/stars4.png);
+    -webkit-animation: 2.15s twinkleDeep ease infinite;
     animation: 2.15s twinkleDeep ease infinite;
 } 
 #more {
@@ -313,6 +350,7 @@ header {
     text-align: center;
     color: #fff;
     text-shadow: 4px 4px #0086b3;
+    -webkit-animation: 3.5s twinkleLight ease infinite;
     animation: 3.5s twinkleLight ease infinite;
 }
 
@@ -369,6 +407,7 @@ section#volunteer {
     width: 50%;
     padding: 7%;
     float: left;
+    -webkit-animation: 2.5s fadeIn ease-in;
     animation: 2.5s fadeIn ease-in;
 }
 .vol-icons {
@@ -428,9 +467,11 @@ section#volunteer {
     background-color: #02537d;
 }
 .fade {
+    -webkit-animation: 2s fade ease;
     animation: 2s fade ease;
 }
 .fade-in {
+    -webkit-animation: 4s fadeIn ease;
     animation: 4s fadeIn ease;
 }
 
@@ -523,11 +564,11 @@ section#programming {
     width: 100%;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to bottom, #fff, #fff, #e6f9ff);
 }
 .site-text {
     width: 50%;
     padding: 5% 5% 7%;
+    background: linear-gradient(to bottom, #fff, #fff, #e6f9ff);
 }
 .site-text h2 {
     margin-bottom: 5%;
@@ -685,6 +726,8 @@ footer {
         position: absolute;
         top: 50%;
         left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
 }
