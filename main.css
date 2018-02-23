@@ -75,7 +75,7 @@ a:hover {
     color: #007399;
 }
 /*Flex*/
-.flex-container {
+.flex {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -121,12 +121,13 @@ a:hover {
 /*Top nav*/
 #top-nav {
     width: 100%;
-    height: 55px;
+    padding: 5px 0;
     z-index: 99;
     position: fixed; 
     position: sticky; 
     position: -webkit-sticky;
     top: 0;
+    overflow: hidden;
     text-align: center;
     box-shadow: 0 5px 10px rgba(0,0,0,0.25);
     background: linear-gradient(to right, #99ffe6, #99e6ff);
@@ -172,6 +173,7 @@ a:hover {
     transform: rotate(45deg) translate(-8px, -8px);
 }
 #current h1 {
+    padding: 0 120px 0 55px;
     display: inline-block;
     line-height: 50px;
     font-size: 2rem;
@@ -186,7 +188,7 @@ a:hover {
     display: inline-block;
     float: right;
     color: #007399;
-    line-height: 55px;
+    line-height: 60px;
 }
 
 
@@ -358,7 +360,7 @@ section#volunteer {
     overflow: hidden;
 }
 .slide {    
-    width: 100vw;
+    width: 100%;
     display: none;
     transition: 0.5s;
     background: linear-gradient(to bottom, #fff, #fff, #e6f9ff);
@@ -367,6 +369,7 @@ section#volunteer {
     width: 50%;
     padding: 7%;
     float: left;
+    animation: 2.5s fadeIn ease-in;
 }
 .vol-icons {
     width: 110%;
@@ -430,9 +433,6 @@ section#volunteer {
 .fade-in {
     animation: 4s fadeIn ease;
 }
-.vol-text {
-    animation: 2.5s fadeIn ease-in;
-}
 
 
 /*Programming section*/
@@ -443,6 +443,7 @@ section#programming {
 }
 #progress-bars {
     width: 35%;
+    margin-bottom: 5%;
     float: left;
 }
 #progress-bars h3 {
@@ -455,7 +456,7 @@ section#programming {
 .bar {
     width: 100%;
     height: 20px;
-    margin: 1% 0 10%;
+    margin: 1% 0 9%;
     position: relative;
     border-radius: 20px;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
@@ -640,15 +641,26 @@ section#art {
     .col2 {
         width: 100%!important;
     }
+    /*Header*/
+    #name h2 {
+        font-size: 5vw!important;
+    }
+    #name h1 {
+        font-size: 8vw;
+    }
     /*Volunteer section*/
     #dot-holder {
+        bottom: 550px;
         left: 50%;
     }
     .prev, .next {
         top: 20%;
     }
-    .vol-text {
+    .vol-text, .site-text {
         padding: 12%;
+    }
+    .vol-img, .site-img {
+        min-height: 500px;
     }
     /*Experience section*/
     .bar {
@@ -669,6 +681,31 @@ section#art {
     }
 }
 @media only screen and (max-width: 600px){
+    /*Header*/
+    #name h2 {
+        font-size: 7vw!important;
+    }
+    #name h1 {
+        font-size: 12vw;
+    }
+    /*Nav*/
+    #nav-icons {
+        display: none;
+    }
+    .change {
+        margin-left: 90vw;
+    }
+    #side-nav a {
+        padding:5% 0;
+        display: block;
+        font-size: 2rem;
+        text-align: center;
+        color: #f2f2f2;
+        transition: 0.3s;
+    }
+    #drop-content {
+        margin: 0;
+    }
     /*Art section*/
     .art {
         width: 95vw;
