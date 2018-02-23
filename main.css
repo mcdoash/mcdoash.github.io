@@ -636,6 +636,14 @@ section#art {
 }
 
 
+/*Footer*/
+footer {
+    min-height: 100px;
+    border-top: 2px outset rgba(0,0,0,0.05);
+    background: linear-gradient(to bottom, #99ffe6, #99e6ff);
+}
+
+
 /*Media queries*/
 @media only screen and (max-width: 1000px) {
     .col2 {
@@ -689,9 +697,6 @@ section#art {
         font-size: 12vw;
     }
     /*Nav*/
-    #nav-icons {
-        display: none;
-    }
     .change {
         margin-left: 90vw;
     }
