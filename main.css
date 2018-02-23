@@ -244,11 +244,11 @@ a:hover {
     color: #f2f2f2;
     transition: 0.3s;
 }
-#side-nav a:hover, #side-nav a:hover .fa-caret-down, #dropbtn:hover  {
+#side-nav a:hover, #side-nav a:hover .fa-caret-down, .dropbtn:hover  {
     color: #fff;
     background-color: #02567e;
 }
-#dropbtn {
+.dropbtn {
     display: block;
     position: relative;
 }
@@ -257,12 +257,12 @@ a:hover {
     font-size: 1.25rem;
     color: #d9d9d9;
 }
-#drop-content {
+.drop-content {
     height: 0;
     margin: 0 0 2% 10%;
     opacity: 0;
 }
-#dropbtn:hover #drop-content {
+.dropbtn:hover .drop-content {
     height: auto;
     opacity: 1;
     transition: opacity 1s ease;
@@ -751,7 +751,7 @@ footer {
         color: #f2f2f2;
         transition: 0.3s;
     }
-    #drop-content {
+    .drop-content {
         margin: 0;
     }
     /*Art section*/

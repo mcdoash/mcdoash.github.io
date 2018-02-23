@@ -43,20 +43,20 @@ ASHLEY MCDONALD
         <!--Side navigation-->
         <nav id="side-nav">
             <a href="#about">About</a>
-            <div id="dropbtn">
+            <div class="dropbtn">
                 <a href="#volunteer">Experience
                 <i class="fa fa-caret-down"></i>
                 </a>
-                <div id="drop-content">
+                <div class="drop-content">
                     <a href="#volunteer">Volunteer</a>
                     <a href="#programming">Programming</a>
                 </div>
             </div>
-            <div id="dropbtn">
+            <div class="dropbtn">
                 <a href="#website">Portfolio
                 <i class="fa fa-caret-down"></i>
                 </a>
-                <div id="drop-content">
+                <div class="drop-content">
                     <a href="#website">Websites</a>
                     <a href="#art">Art</a>
                 </div>
@@ -88,13 +88,13 @@ ASHLEY MCDONALD
             
             
             <!--Top navigation-->
-            <span id="openbtn" class="fade-in-view" onclick="openNav()">
+            <div id="openbtn" class="fade-in-view" onclick="openNav()">
                 <div id="bar1"></div>
                 <div id="bar2"></div>
                 <div id="bar3"></div>
-            </span>
+            </div>
             <nav id="top-nav">
-                <span id="current"><h1></h1></span>
+                <div id="current"><h1></h1></div>
                 <div id="nav-icons">
                     <a href="mailto:ashmc335@gmail.com" class="fa fa-envelope-o"></a>
                     <a href="https://github.com/mcdoash" target="_blank" class="fa fa-github"></a>
@@ -220,37 +220,37 @@ ASHLEY MCDONALD
                 <div id="progress-bars" class="col2">
                     <h3>HTML</h3>
                     <div class="bar">
-                        <span class="percent"><p>85%</p></span>
+                        <div class="percent"><p>85%</p></div>
                         <div class="progress" style="width: 85%;"></div>
                     </div>
 
                     <h3>CSS</h3>
                     <div class="bar">
-                        <span class="percent"><p>65%</p></span>
+                        <div class="percent"><p>65%</p></div>
                         <div class="progress" style="width: 65%;"></div>
                     </div>
 
                     <h3>PHP</h3>
                     <div class="bar">
-                        <span class="percent"><p>40%</p></span>
+                        <div class="percent"><p>40%</p></div>
                         <div class="progress" style="width: 40%;"></div>
                     </div>
 
                     <h3>Java</h3>
                     <div class="bar">
-                        <span class="percent"><p>70%</p></span>
+                        <div class="percent"><p>70%</p></div>
                         <div class="progress" style="width: 70%;"></div>
                     </div>
 
                     <h3>Javascript</h3>
                     <div class="bar">
-                        <span class="percent"><p>45%</p></span>
+                        <div class="percent"><p>45%</p></div>
                         <div class="progress" style="width: 45%;"></div>
                     </div>
 
                     <h3>SQL</h3>
                     <div class="bar">
-                        <span class="percent"><p>20%</p></span>
+                        <div class="percent"><p>20%</p></div>
                         <div class="progress" style="width: 20%;"></div>
                     </div>
                 </div>
@@ -298,11 +298,11 @@ ASHLEY MCDONALD
                 
                 <div class="exp-box col2" style="width: 48%; float: left;">
                     <h3>First Objects Assignment</h3><br/>
-                    <iframe height="400px" width="100%" src="https://repl.it/@ashmc/ICS4U-Employee-Assignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                    <iframe height="500px" width="100%" src="https://repl.it/@ashmc/ICS4U-Employee-Assignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
                 </div>
                 <div class="exp-box col2" style="width: 48%; float: right;">
                     <h3>Console Blackjack</h3><br/>
-                    <iframe height="400px" width="100%" src="https://repl.it/@ashmc/ICS4U-Blackjack?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                    <iframe height="500px" width="100%" src="https://repl.it/@ashmc/ICS4U-Blackjack?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
                 </div>
             </section>
             
@@ -583,6 +583,7 @@ ASHLEY MCDONALD
             /*Art modal*/
             $(".art").click(function(){
                 $("#modal-img").attr("src", $(this).children("img").attr("src"));
+                $("#modal-img").attr("alt", $(this).children("img").attr("alt"));
                 $("#caption").text($(this).children(".title").text());
                 $("#modal").fadeIn(1000);
             });
