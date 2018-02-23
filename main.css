@@ -205,7 +205,7 @@ a:hover {
     transform: rotate(45deg) translate(-8px, -8px);
 }
 #current h1 {
-    padding: 0 120px 0 55px;
+    padding: 0 155px;
     display: inline-block;
     line-height: 50px;
     font-size: 2rem;
@@ -231,7 +231,7 @@ a:hover {
     padding-top: 5%;
     position: fixed;
     overflow-x: hidden;
-    z-index: 99;
+    z-index: 100;
     top: 0;
     left: 0;
     background-color: #01334b;
@@ -607,8 +607,8 @@ section#art {
     background: linear-gradient(#fff, #ccfff2, #ccf2ff);
 }
 .art {
-    width: 30vw;
-    height: 30vw;
+    width: 29vw;
+    height: 29vw;
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -677,14 +677,6 @@ section#art {
 }
 
 
-/*Footer*/
-footer {
-    min-height: 100px;
-    border-top: 2px outset rgba(0,0,0,0.05);
-    background: linear-gradient(to bottom, #99ffe6, #99e6ff);
-}
-
-
 /*Media queries*/
 @media only screen and (max-width: 1000px) {
     .col2 {
@@ -717,8 +709,8 @@ footer {
     }
     /*Art section*/
     .art {
-        width: 45vw;
-        height: 45vw;
+        width: 44vw;
+        height: 44vw;
     }
     #modal-img {
         width: 80%;
@@ -732,6 +724,9 @@ footer {
     }
 }
 @media only screen and (max-width: 600px){
+    h2 {
+        font-size: 1.9rem;    
+    }
     /*Header*/
     #name h2 {
         font-size: 7vw!important;
@@ -741,10 +736,13 @@ footer {
     }
     /*Nav*/
     .change {
-        margin-left: 90vw;
+        margin-left: 87vw;
+    }
+    #current h1 {
+        padding: 0 55px;
     }
     #side-nav a {
-        padding:5% 0;
+        padding: 5% 0;
         display: block;
         font-size: 2rem;
         text-align: center;
@@ -754,10 +752,18 @@ footer {
     .drop-content {
         margin: 0;
     }
+    #nav-icons {
+        padding-right: 5%;
+        position: fixed;
+        top: 90vh;
+        right: 65vw;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+        background: linear-gradient(to right, #99ffe6, #99e6ff);
+    }
     /*Art section*/
     .art {
-        width: 95vw;
-        height: 95vw;
+        width: 94vw;
+        height: 94vw;
         margin-bottom: 5%;
     }
 }
