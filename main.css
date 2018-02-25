@@ -609,6 +609,7 @@ section#art {
 .art {
     width: 29vw;
     height: 29vw;
+    margin: .5% auto;
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -725,7 +726,7 @@ section#art {
 }
 @media only screen and (max-width: 600px){
     h2 {
-        font-size: 1.9rem;    
+        font-size: 1.7rem;    
     }
     /*Header*/
     #name h2 {
@@ -733,6 +734,9 @@ section#art {
     }
     #name h1 {
         font-size: 12vw;
+    }
+    #more {
+        left: 43%;
     }
     /*Nav*/
     .change {
@@ -753,12 +757,18 @@ section#art {
         margin: 0;
     }
     #nav-icons {
-        padding-right: 5%;
+        width: 150px;
+        padding-right: 3%;
         position: fixed;
-        top: 90vh;
-        right: 65vw;
+        top: auto;
+        right: auto;
+        bottom: 2%;
+        left: 0;
         box-shadow: 0 5px 10px rgba(0,0,0,0.25);
         background: linear-gradient(to right, #99ffe6, #99e6ff);
+    }
+    #nav-icons .fa {
+        margin: 0 4%;
     }
     /*Art section*/
     .art {
