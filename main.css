@@ -84,6 +84,14 @@ a:hover {
     overflow: hidden;
 }
 /*Animations*/
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
 @keyframes fade {
     from {opacity: 0.6;}
     to {opacity: 1;}
@@ -145,6 +153,32 @@ a:hover {
     transition: visibility 1s linear;
     -webkit-animation: 2.5s fadeIn ease-in;
     animation: 2.5s fadeIn ease-in;
+}
+
+
+/*Loader*/
+#load-screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #040429, #0086b3);
+}
+#spinner {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border: 15px solid #99e6ff;
+    border-top: 15px solid #0398e2;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+.hidden {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
 }
 
 
