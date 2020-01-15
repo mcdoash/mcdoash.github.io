@@ -524,13 +524,13 @@ section#programming {
     background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
 }
 #languages {
-    width: 45%;
-    margin-bottom: 5%;
+    width: 50%;
+    margin-top: -3%;
     float: left;
 }
 .box {
-    width: 15vw;
-    height: 15vw;
+    width: 12vw;
+    height: 12vw;
     margin: 3%;
     border-radius: 10px;
     position: relative;
@@ -539,8 +539,11 @@ section#programming {
     box-shadow: inset -4px -4px 0 2px #0099cc;
     transition: opacity 0.5s ease;
 }
+.box.special {
+    background: linear-gradient(to bottom right, #99e6ff, #00bfff);
+}
 .box h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: left;
     position: absolute;
     top: 50%;
@@ -551,7 +554,7 @@ section#programming {
     text-shadow: 2px 2px #006080;
 }
 .box:hover {
-    opacity: 0.5;
+    
 }
 .exp-box {
     width: 100%;
