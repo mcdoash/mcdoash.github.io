@@ -60,20 +60,15 @@ a:hover {
     background-attachment: fixed;
 }
 /*Icons*/
-.fa {
+.icon {
     font-size: 50px;
     color: #02537d;
     transition: opacity 0.5s ease, color 0.5s ease;
 }
-.fa:hover {
+.icon:hover {
     opacity: .6;
 }
-.icon p {
-    transition: color 0.5s ease;
-}
-.icon:hover p, .icon:hover i {
-    color: #007399;
-}
+
 /*Flex*/
 .flex {
     display: -webkit-box;
@@ -249,7 +244,7 @@ a:hover {
     position: absolute;
     top: 0;
 }
-#nav-icons .fa {
+#nav-icons .icon {
     margin: 0 1%;
     display: inline-block;
     float: right;
@@ -455,7 +450,17 @@ section#volunteer {
     width: 110%;
     margin-top: 7%;;
     text-align: center;
-    transition: visibility 1s linear;
+    transition: color 0.5s ease;
+}
+.vol-icons i {
+    margin: 0 2%;
+    display: inline-block;
+}
+.vol-icons p {
+    font-weight: bold;
+}
+.vol-icons i:hover {
+    color: #007399;
 }
 .vol-img {
     width: 50%;
