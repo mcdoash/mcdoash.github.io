@@ -571,6 +571,9 @@ section#programming {
     background: linear-gradient(to bottom right, #e6f9ff, #fff);
     transition: box-shadow 1s ease;
 }
+#school-projects .exp-box {
+    width: 48%;
+}
 .exp-box:hover {
     box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
 }
