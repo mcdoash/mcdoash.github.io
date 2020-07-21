@@ -4,6 +4,7 @@
 }
 html {
     font-size: 20px;
+    font-family: "Source Serif Pro";
 }
 div#container {
     width: 100%;
@@ -522,44 +523,73 @@ section#volunteer {
 }
 
 
-/*Programming section*/
 section#programming {
     padding: 5%;
     overflow: hidden;
     background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
 }
-#languages {
-    width: 50%;
-    margin-top: -3%;
+#progress-bars {
+    width: 35%;
+    margin-bottom: 5%;
     float: left;
 }
-.box {
-    width: 12vw;
-    height: 12vw;
-    margin: 3%;
-    border-radius: 10px;
-    position: relative;
-    background-color: #99e6ff;
-    background: linear-gradient(to bottom right, #e6f9ff, #99e6ff);
-    box-shadow: inset -4px -4px 0 2px #0099cc;
-    transition: opacity 0.5s ease;
-}
-.box.special {
-    background: linear-gradient(to bottom right, #99e6ff, #00bfff);
-}
-.box h3 {
-    font-size: 1.5rem;
+#progress-bars h3 {
+    font-size: 2rem;
     text-align: left;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: #0099cc;
     font-family: "Exo";
     text-shadow: 2px 2px #006080;
 }
-.box:hover {
-    
+#progress-bars span {
+  font-size: 1.25rem;
+  color: #0099cc;
+}
+.bar {
+    width: 100%;
+    height: 20px;
+    margin: 1% 0 9%;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
+    background-color: #e6f7ff;
+}
+.progress {
+    height: 100%;
+    margin: 2% 0;
+    border-radius: 20px 0 0 20px;
+    background: linear-gradient(to right, #80ffdf, #66d9ff);
+    transition: opacity 0.5s ease;
+}
+.percent {
+    padding: 2%;
+    position: absolute;
+    bottom: 30px;
+    right: 50%;
+    color: #fff;
+    opacity: 0;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: #00ace6;
+    transition: opacity 1s ease;
+}
+.percent p {
+    color: #fff;
+}
+.percent:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #0086b3 transparent transparent transparent;
+}
+.bar:hover .progress {
+    opacity: 0.5;
+}
+.bar:hover .percent {
+    opacity: 1;
 }
 .exp-box {
     width: 100%;
@@ -571,15 +601,13 @@ section#programming {
     background: linear-gradient(to bottom right, #e6f9ff, #fff);
     transition: box-shadow 1s ease;
 }
-#school-projects .exp-box {
-    width: 48%;
-}
 .exp-box:hover {
     box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
 }
 .exp-box ul {
     margin-bottom: 2%;
 }
+
 
 
 /*Website section*/
@@ -622,7 +650,7 @@ section#website {
 
 /*Art section*/
 section#art {
-    padding: 5%;
+    padding: 5% 5% 3% 5%;
     position: relative;
     background: linear-gradient(#fff, #ccfff2, #ccf2ff);
 }
@@ -695,6 +723,32 @@ section#art {
 }
 #modal span#close:hover {
     color: #00bfff;
+}
+
+
+/*footer*/
+footer {
+  padding: 1%;
+  position: relative;
+  background-color: #02537d;
+}
+footer p {
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccf2ff;
+  float: right;
+}
+#footer-icons{
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  color: #99e6ff;
+}
+#footer-icons .icon {
+  margin: 0 10px;
+  color: #99e6ff;
 }
 
 

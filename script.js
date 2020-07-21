@@ -134,3 +134,7 @@ window.onclick = function(event) {
         $("#modal").fadeOut(1000);
     }
 }
+
+/*Footer date*/
+var year = new Date().getFullYear();
+$("#date").html(year); 
