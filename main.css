@@ -395,137 +395,38 @@ section#about {
     background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
 }
 #profile {
-    width: 50%;
+    width: 45%;
     padding: 2%;
     margin-right: 10%;
     text-indent: 25px;
 }
-#interests {
-    width: 40%;
+#info {
+    width: 45%;
     min-height: 400px;
     padding: 2%;
 }
-.item {
-  flex-direction: column;
-  justify-content: center;
+#info table {
+    margin: 0 auto;
 }
-.item .icon {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    background-color: #e6f9ff;
-    box-shadow: inset -4px -4px 0 2px #ddd;
+#info td {
+  padding: 3% 2%;
 }
-.item .icon .fa {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    float: left;
-    margin: -27px 0 0 -28px;
+.icon-col {
+  text-align: center;
 }
-.item .text {
-    width: 73%;
-    float: left;
+.icon-col .icon {
+  color: #0086b3;
 }
-
-
-/*Volunteer section*/
-section#volunteer {
-    position: relative;
-    overflow: hidden;
-}
-.slide {    
-    width: 100%;
-    display: none;
-    transition: 0.5s;
-    background: linear-gradient(to bottom, #fff, #fff, #e6f9ff);
-}
-.vol-text {
-    width: 50%;
-    padding: 7%;
-    float: left;
-    -webkit-animation: 2.5s fadeIn ease-in;
-    animation: 2.5s fadeIn ease-in;
-}
-.vol-icons {
-    width: 110%;
-    margin-top: 7%;;
-    text-align: center;
-    transition: color 0.5s ease;
-}
-.vol-icons i {
-    margin: 0 2%;
-    display: inline-block;
-}
-.vol-icons p {
-    font-weight: bold;
-}
-.vol-icons i:hover {
-    color: #007399;
-}
-.vol-img {
-    width: 50%;
-    float: left;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: opacity 1s ease;
-}
-.prev, .next {
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    position: absolute;
-    top: 40%;
-    cursor: pointer;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #666;
-    border-radius: 0 3px 3px 0;
-    background-color: rgba(255,255,255,0.75);
-    transition: 0.6s ease;
-}
-.prev:hover, .next:hover {
-    color: #fff;
-    background-color: rgba(0,0,0,0.5);
-}
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-#dot-holder {
-    margin-top: 2%;
-    position: absolute;
-    bottom: 5%;
-    left: 22%;
-    text-align: center; 
-}
-.dot {
-    width: 15px;
-    height: 15px;
-    margin: 0 2px;
-    display: inline-block;
-    cursor: pointer;
-    border-radius: 50%;
-    background-color: #0398e2;
-    transition: background-color 1s ease;
-}
-.active, .dot:hover {
-    background-color: #02537d;
-}
-.fade {
-    -webkit-animation: 2s fade ease;
-    animation: 2s fade ease;
-}
-.fade-in {
-    -webkit-animation: 4s fadeIn ease;
-    animation: 4s fadeIn ease;
+.text-col h3 {
+  text-align: left;
+  color: #0086b3;
 }
 
 
 section#programming {
     padding: 5%;
     overflow: hidden;
+    position: relative;
     background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
 }
 #progress-bars {
@@ -560,36 +461,8 @@ section#programming {
     background: linear-gradient(to right, #80ffdf, #66d9ff);
     transition: opacity 0.5s ease;
 }
-.percent {
-    padding: 2%;
-    position: absolute;
-    bottom: 30px;
-    right: 50%;
-    color: #fff;
-    opacity: 0;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    background-color: #00ace6;
-    transition: opacity 1s ease;
-}
-.percent p {
-    color: #fff;
-}
-.percent:after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #0086b3 transparent transparent transparent;
-}
 .bar:hover .progress {
     opacity: 0.5;
-}
-.bar:hover .percent {
-    opacity: 1;
 }
 .exp-box {
     width: 100%;
@@ -730,7 +603,7 @@ section#art {
 footer {
   padding: 1%;
   position: relative;
-  background-color: #02537d;
+  background-color: #007399;
 }
 footer p {
   position: absolute;

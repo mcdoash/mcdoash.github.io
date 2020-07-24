@@ -96,92 +96,35 @@
                 <div class="flex">
                     <div id="profile" class="col2">
                         <h2 style="text-align: left;">Ashley McDonald</h2><br/>
-                        <div style="background-image: url(images/logo.png); background-position: center; background-size: contain; background-repeat: no-repeat; width: 100px; height: 100px;"></div>
-                        <div>
-                            <ui>
-                                <li><p>Bachelor of Computer Science: Software Engineering at Carleton University</p></li>
-                                <li><p>Aspiring full stack developer</p></li>
-                                <li><p></p></li>
-                            </ui>
-                        </div>
+                        <div style="background-image: url(images/logo.png); background-position: center; background-size: contain; background-repeat: no-repeat; width: 100px; height: 100px; display: none;"></div>
+                        <p>\</p>
                     </div>
 
-                    <div id="interests" class="col2">
-                        <div class="item flex">
-                            <div class="icon circle">
-                                <i class="fa fa-code" aria-hidden="true"></i>
-                            </div>
-                            <div class="text">
-                                <h3>Code</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus nisi vitae dolor mollis molestie.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            
-            <!--Volunteer section-->
-            <section id="volunteer" class="parallax" link-title="experience: volunteer">
-                    
-                <div class="slide fade">
-                    <div class="flex">
-                        <div class="vol-text col2">
-                            <h2>Central Programming Club</h2>
-                            <br/>
-                            <p>The development of my high school's first computer programming club has truly been a labour of love. Our first meeting saw an astounding 50 people, and we have been holding a steady count of about 20 students ever since (the rest we lost to the demands of homework). I have put in over 300 hours thus far, from building and maintaining our website to planning and leading club activities. I have tackled projects such as an introduction to code for beginners, a <a href="https://repl.it/community/classrooms/35322" target="_blank">Turtle Graphics Tutorial</a>, <a href="https://github.com/CentralProgramming/Custom-Browser-Start-Page" target="_blank">Browser Start Page Tutorial</a>, and even helping to plan our own programming contest. What I am most proud of is facing my fear of public speaking to help bring together people with a passion for code and introduce it to others who would like to learn.</p>
-
-                            <div class="vol-icons">
-                                <i class="icon far fa-clock"><p>325 hours</p></i>
-                                <i class="icon fas fa-users"><p>Leadership</p></i>
-                                <i class="icon fas fa-exclamation-triangle"><p>30+ issues solved</p></i>
-                            </div>
-                        </div>
-                        <div class="vol-img col2" style="background-image: url(images/cpc-website.jpg);"></div>
-                    </div>
-                </div>
-
-                <div class="slide fade">
-                    <div class="flex">
-                        <div class="vol-text col2">
-                            <h2>FutureWorks</h2>
-                            <br/>
-                            <p>FutureWorks is a Junior Achievement company that produces the London’s Little Picassos magazine filled with art from London high school students. Besides having my art featured in the book, I also developed their website before they decided not to continue with it due to time restraints. I was able to extend my web development knowledge greatly; it was my first time working with jQuery and really getting into CSS animations. This allowed me to add a lot more interactive elements, creating a better user experience. Building this website has taught me how to work with the company in order to meet their goals and match their overall brand.</p>
-                            <div class="vol-icons">
-                                <i class="icon far fa-clock"><p>20 hours</p></i>
-                                <i class="icon fas fa-code"><p>Experience</p></i>
-                            </div>
-                        </div>
-                        <div class="vol-img col2" style="background-image: url(images/fw-website.png);"></div>
-                    </div>
-                </div>
-
-                <div class="slide fade">
-                    <div class="flex">
-                        <div class="vol-text col2">
-                            <h2>Music Editing</h2>
-                            <br/>
-                            <p>My high school's most popular club is the Multicultural club, which features several dance groups from cultures around the world, and I helped edit the music for the Korean-pop group. Through this, I had to learn how to use GarageBand, a music editing program I had rarely used before, to cut and blend music so that it fit seamlessly together. I had to gain a solid grasp of the software as quickly as possible, as I was working under a time restraint.</p>
-                            <div class="vol-icons">
-                                <i class="icon far fa-clock">
-                                <p>6+ hours</p></i>
-                                <i class="icon fas fa-graduation-cap">
-                                <p>Quick Learner</p></i>
-                            </div>
-                        </div>
-                        <div class="vol-img col2" style="background-image: url(images/music.jpg);"></div>
-                    </div>
-                </div>
-
-                <!--Prev/next buttons-->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <!--Slide dots-->
-                <div id="dot-holder">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <div id="info" class="col2">
+                        <table>
+                            <tr>
+                                <td class="icon-col"><i class="icon fas fa-map-marker-alt"></i></td>
+                                <td class="text-col"><h3>Ottawa, Canada</h3></td>
+                            </tr>
+                            <tr>
+                                <td class="icon-col"><i class="icon fas fa-school"></i></td>
+                                <td class="text-col">
+                                    <h3>Carleton University</h3>
+                                    <p>3<sup>rd</sup> year Computer Science Honours in Software Engineering</p></td>
+                            </tr>
+                            <tr>
+                                <td class="icon-col"><i class="icon fas fa-code"></i></td>
+                                <td class="text-col"><h3>Programmer</h3>
+                                <p>Currently working on a Ruby on Rails project and freelance web development</p></td>
+                            </tr>
+                            <tr>
+                                <td class="icon-col"><i class="icon fas fa-pencil-alt"></i></td>
+                                <td class="text-col"><h3>Artist</h3>
+                                <p>Hobbyist with a passion for acrylic painting and pastel</p></td>
+                            </tr>
+                        </table>
+                        
+                        
                 </div>
             </section>
             
@@ -199,6 +142,12 @@
                     <span>jQuery, Node.js, Express</span>
                     <div class="bar">
                         <div class="progress" style="width: 70%;"></div>
+                    </div>
+
+                    <h3>Ruby</h3>
+                    <span>Ruby on Rails</span>
+                    <div class="bar">
+                        <div class="progress" style="width: 40%;"></div>
                     </div>
 
                     <h3>Java</h3>
@@ -220,19 +169,15 @@
                     <div class="bar">
                         <div class="progress" style="width: 40%;"></div>
                     </div>
-
-                    <h3>Ruby on Rails</h3>
-                    <div class="bar">
-                        <div class="progress" style="width: 45%;"></div>
-                    </div>
                 </div>
                 
                 
                 <div class="col2" style="width: 50%; float: right;">
                     <div class="exp-box">
                         <h3>Where I've learned:</h3>
+                        <br/>
                         <ul>
-                            <li><p><b>Relavent Coursework</b></p>
+                            <li><p><b>Carleton University Courses</b></p>
                                 <ul>
                                     <li><p>Introduction to Systems Programming</p></li>
                                     <li><p>Fundamentals of Web Applications</p></li>
@@ -245,7 +190,9 @@
                                 <ul>
                                     <li><p><a href="https://devpost.com/software/the-fridged-pantry" target="_blank">Hack the North</a> (2018)</p></li>
                                     <li><p><a href="https://devpost.com/software/cosmots" target="_blank">Masseyhack IV</a> (2018)</p></li>
+                                    <li><p>ECOO Programming Contest - Round 2 (2017)</p></li>
                                     <li><p>Mikutech Game Developer Outreach (2017)</p></li>
+                                    <li><p>Canadian Computing Competition (junior) - Award of Distinction (2017)</p></li>
                                 </ul>
                             </li>
                         </ul>
@@ -254,6 +201,7 @@
                     
                     <div class="exp-box">
                         <h3>I have experience in:</h3>
+                        <br/>
                         <ul>
                             <li><p>git &amp; GitHub</p></li>
                             <li><p>Bash &amp; Linux</p></li>
@@ -285,86 +233,6 @@
                     </div>
                 </div>
             </section>
-                <!--<section id="website" link-title="portfolio: websites">
-                <div class="site flex">
-                    <h3>
-                        <a href="https://devpost.com/software/cosmots" target="_blank">COSMOtS</a>
-                        <a href="https://github.com/Central-G-H-O-S-T/COSMOtS" target="_blank" class="fa fa-github-square"></a>
-                    </h3>
-                    <div class="click-to-show">
-                        <div class="site-img" style="background-image: url(images/mh-website.png);"></div>
-                    </div>
-                    <div class="site-text fade-in-view">
-                        <p>This project was created at my first ever hackathon, <a href="https://masseyhacks4.devpost.com/" target="_blank">MasseyHacks IV.</a> Developed in only 24 hours, COSMOtS is a a personalized dictionary for those who aim to find a new meaning of the world through words. It stores the words that mean the most to you in a personal database, gives a translation, and sorts the words in folders.<br/><br/>
-                        
-                        Even after encountering numerous difficulties, we were able to pitch a completed product that won the <b>Hack the North prize.</b> I learned so much from this experience, including how to work under an extreme time constraint and pressure, pitch a product, overcome problems in the development process, and stay awake for 30+ hours with only minimal damage.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="site flex">
-                    <h3>
-                        This Website
-                        <a href="https://github.com/mcdoash/mcdoash.github.io" target="_blank" class="fa fa-github-square"></a>
-                    </h3>
-                    <div class="click-to-show">
-                        <div class="site-img" style="background-image: url(images/pw-website.png);"></div>
-                    </div>
-                    <div class="site-text fade-in-view">
-                        <p>This is something I'm really proud of. It's a collision of all the knowlege I've gained thus far, creating both an experience and a design I'm happy with. That being said, there's still so much to improve on and much more learning to be done. I know that if I keep learning, I can create something even more stunning in the future.</p>
-                        <br/>
-                        <p>Some more things I learned include:</p>
-                        <ul>
-                            <li><p>How to use CSS in a way that's built for reusability</p></li>
-                            <li><p>How to trigger animations on scroll</p></li>
-                            <li><p>How to finish a responsive website filled with animations while studying for exams and completing homework</p></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="site flex">
-                    <h3>
-                        <a href="https://mcdoash.github.io/FutureWorks-Website/" target="_blank">FutureWorks</a>
-                        <a href="https://github.com/mcdoash/FutureWorks-Website" target="_blank" class="fa fa-github-square"></a>
-                    </h3>
-                    <div class="click-to-show">
-                         <div class="site-img" style="background-image: url(images/fw-website.png);"></div>
-                    </div>
-                    <div class="site-text fade-in-view">
-                        <p>This website was an amazing experience. Having less content meant I was able to focus more on the little details and really polish all aspects. Smooth scrolling? Check. Progress bar that shows you how far you've scrolled? Check. Slideshow with changing text and background images? Double check. It was through the knowledge I gained making this site that I was able to build the one you're looking at today.</p>
-                        <br/>
-                        <p>Some more things I learned include:</p>
-                        <ul>
-                            <li><p>How to use jQuery</p></li>
-                            <li><p>How to work with a company</p></li>
-                            <li><p>How to keep branding in mind</p></li>
-                            <li><p>How to create a positive user-experience</p></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="site flex">
-                    <h3>
-                        <a href="https://centralprogramming.github.io/" target="_blank">Central Programming Club</a>
-                        <a href="https://github.com/CentralProgramming/centralprogramming.github.io/" target="_blank" class="fa fa-github-square"></a>
-                    </h3>
-                    <div class="click-to-show">
-                        <div class="site-img" style="background-image: url(images/cpc-website.jpg);"></div>
-                    </div>
-                    <div class="site-text fade-in-view">
-                        <p>As my first big website, this was a great challenge. I had to learn about servers, a bit of back-end development, and how to google really, really well. I hit a lot of bumps along the way, but came out of it with enough knowlege and experience to go on to build other websites. I updated this site weekly for a year.</p>
-                            <br/>
-                        <p>Some more things I learned include:</p>
-                        <ul>
-                            <li><p>How to use git and GitHub</p></li>
-                            <li><p>How to use the command line</p></li>
-                            <li><p>How to set up web hosting</p></li>
-                            <li><p>How to finish a responsive, multi-page website in approx. 6 weeks with little experience</p></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>-->
-
             
             
             <!--Art section-->
