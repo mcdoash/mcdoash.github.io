@@ -88,37 +88,6 @@ $(window).on("resize scroll load", function(){
 });
 
 
-/*Slideshow*/
-var slideIndex = 1;
-changeSlides(slideIndex);
-
-function plusSlides(n){
-    changeSlides(slideIndex+=n);
-}
-function currentSlide(n){
-    changeSlides(slideIndex=n);
-}
-function changeSlides(n){
-    var slides = document.getElementsByClassName("slide");
-    var dots = document.getElementsByClassName("dot");
-
-    if(n>slides.length){
-        slideIndex = 1;
-    }
-    else if(n<1){
-        slideIndex = slides.length;
-    }
-
-    for(var i=0; i<slides.length; i++){
-        slides[i].style.display = "none";
-    }
-    for(var i=0; i<dots.length; i++){
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-}
-
 /*Art modal*/
 $(".art").click(function(){
     $("#modal-img").attr("src", $(this).children("img").attr("src"));
