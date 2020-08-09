@@ -5,6 +5,7 @@
 html {
     font-size: 20px;
     font-family: "Source Serif Pro";
+    overflow-x: hidden;
 }
 div#container {
     width: 100%;
@@ -193,7 +194,6 @@ a:hover {
     background: linear-gradient(to right, #99ffe6, #99e6ff);
 }
 #openbtn {
-    display: none;
     position: fixed;
     left: 2%;
     top: 1%;
@@ -247,7 +247,6 @@ a:hover {
 }
 #nav-icons .icon {
     margin: 0 1%;
-    display: inline-block;
     float: right;
     color: #007399;
     line-height: 60px;
@@ -401,22 +400,28 @@ section#about {
     margin-right: 10%;
     text-indent: 25px;
 }
+#profile h2 {
+    font-size: 2rem;
+    text-align: left;
+}
 #info {
     width: 45%;
     min-height: 400px;
-    padding: 2%;
-}
-#info table {
+    padding: 2% 0;
     margin: 0 auto;
 }
-#info td {
+#info .item {
   padding: 3% 2%;
+  display: flex;
 }
-.icon-col {
-  text-align: center;
+#info .icon {
+    width: 25%;
+    margin: auto;
+    text-align: center;
+    color: #0086b3;
 }
-.icon-col .icon {
-  color: #0086b3;
+.text-col {
+    width: 74%;
 }
 .text-col h3 {
   text-align: left;
@@ -486,7 +491,7 @@ section#programming {
 
 
 /*Website section*/
-section#website {
+section#websites {
     width: 100%;
     padding: 3%;
     background: linear-gradient(to bottom, #fff, #fff, #ccf2ff);
@@ -584,8 +589,6 @@ section#art {
     height: 80%;
     margin-top: 2%;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
-}
-#modal-img:hover {
 }
 #modal #caption {
     width: 100%;

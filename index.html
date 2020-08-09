@@ -43,11 +43,11 @@
                 </div>
             </div>
             <div class="dropbtn">
-                <a href="#website" onclick="closeNav()">Portfolio
+                <a href="#websites" onclick="closeNav()">Portfolio
                 <i class="fa fa-caret-down"></i>
                 </a>
                 <div class="drop-content">
-                    <a href="#website" onclick="closeNav()">Websites</a>
+                    <a href="#websites" onclick="closeNav()">Websites</a>
                     <a href="#art" onclick="closeNav()">Art</a>
                 </div>
             </div>
@@ -76,7 +76,7 @@
             
             
             <!--Top navigation-->
-            <div id="openbtn" class="fade-in-view" onclick="openNav()">
+            <div id="openbtn" onclick="openNav()">
                 <div id="bar1"></div>
                 <div id="bar2"></div>
                 <div id="bar3"></div>
@@ -95,34 +95,42 @@
             <section id="about" link-title="about">
                 <div class="flex">
                     <div id="profile" class="col2">
-                        <h2 style="text-align: left;">Ashley McDonald</h2><br/>
+                        <h2>Ashley McDonald</h2>
+                        <br/>
                         <div style="background-image: url(images/logo.png); background-position: center; background-size: contain; background-repeat: no-repeat; width: 100px; height: 100px; display: none;"></div>
                         <p>\</p>
                     </div>
 
                     <div id="info" class="col2">
-                        <table>
-                            <tr>
-                                <td class="icon-col"><i class="icon fas fa-map-marker-alt"></i></td>
-                                <td class="text-col"><h3>Ottawa, Canada</h3></td>
-                            </tr>
-                            <tr>
-                                <td class="icon-col"><i class="icon fas fa-school"></i></td>
-                                <td class="text-col">
-                                    <h3>Carleton University</h3>
-                                    <p>3<sup>rd</sup> year Computer Science Honours in Software Engineering</p></td>
-                            </tr>
-                            <tr>
-                                <td class="icon-col"><i class="icon fas fa-code"></i></td>
-                                <td class="text-col"><h3>Programmer</h3>
-                                <p>Currently working on a Ruby on Rails project and freelance web development</p></td>
-                            </tr>
-                            <tr>
-                                <td class="icon-col"><i class="icon fas fa-pencil-alt"></i></td>
-                                <td class="text-col"><h3>Artist</h3>
-                                <p>Hobbyist with a passion for acrylic painting and pastel</p></td>
-                            </tr>
-                        </table>
+                        <div class="item">
+                            <i class="icon fas fa-map-marker-alt"></i>
+                            <div class="text-col">
+                                <h3>Ottawa, Canada</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="icon fas fa-school"></i>
+                            <div class="text-col">
+                                <h3>Carleton University</h3>
+                                <p>3<sup>rd</sup> year Computer Science Honours in Software Engineering</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="icon fas fa-code"></i>
+                            <div class="text-col">
+                                <h3>Developer</h3>
+                                <p>Currently working on a Ruby on Rails app and freelance web development</p>
+                                <a href="#websites"><b>See my work</b></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="icon fas fa-pencil-alt"></i>
+                            <div class="text-col">
+                                <h3>Artist</h3>
+                                <p>Hobbyist with a passion for acrylic painting and pastel</p>
+                                <a href="#art"><b>See my work</b></a>
+                            </div>
+                        </div>
                 </div>
             </section>
             
@@ -214,7 +222,7 @@
             
             
             <!--Website section-->
-            <section id="website" link-title="portfolio: websites">
+            <section id="websites" link-title="portfolio: websites">
 
                 <!--TABLE DISPLAY-->
 

@@ -35,15 +35,14 @@ function openNav(){
     } 
     document.getElementById("openbtn").classList.add("change");
     document.getElementById("openbtn").onclick = closeNav;
+    positionNavBtn();
 }
 function closeNav() {
-    if($(window).scrollTop()<$("header").height()){
-        $("#openbtn").css("display", "none");
-    }
     document.getElementById("side-nav").style.width = "0";
     document.getElementById("container").style.marginLeft = "0";
     document.getElementById("openbtn").classList.remove("change");
     document.getElementById("openbtn").onclick = openNav;
+    positionNavBtn();
 }
 
 /*Element fade when in view, top nav section text*/
@@ -75,18 +74,22 @@ $(window).on("resize scroll load", function(){
             $("#current h1").text($(this).attr("link-title"));
         }
     });
-    if ($("#openbtn").hasClass("change")){
-        $("#openbtn").css("display", "block");
-    }
-    else if($(window).scrollTop()<$("header").height()){
-        $("#openbtn").css("display", "none");
-    }
-    else{
-         $("#openbtn").css("display", "block");
-    }
-    $("header").css("height", $("#intro-text").outerHeight() + $(window).outerHeight());
+    positionNavBtn();
 });
 
+function positionNavBtn() {
+    if ($("#openbtn").hasClass("change")){
+        $("#openbtn").css("top", "10px");
+    }
+    else if($(window).scrollTop()<$("header").height()){
+        $("#openbtn").css("transition", "none");
+        let navTop = $("header").height() - $(window).scrollTop() + 10;
+        $("#openbtn").css("top", navTop);
+    }
+    else{
+        $("#openbtn").css("top", "10px");
+    }
+}
 
 /*Art modal*/
 $(".art").click(function(){
