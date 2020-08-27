@@ -182,6 +182,7 @@ a:hover {
 /*Top nav*/
 #top-nav {
     width: 100%;
+    height: 60px;
     padding: 5px 0;
     z-index: 99;
     position: fixed; 
@@ -234,11 +235,15 @@ a:hover {
     -ms-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
-#current h1 {
-    padding: 0 155px;
-    display: inline-block;
+#top-nav h1 {
+    float: left;
+    margin-left: 7%;
     line-height: 50px;
     font-size: 2rem;
+}
+#current h1 {
+    float: right;
+    margin-right: 20%;
 }
 #nav-icons {
     width: 100%;
@@ -246,7 +251,7 @@ a:hover {
     top: 0;
 }
 #nav-icons .icon {
-    margin: 0 1%;
+    margin: 0 0.5%;
     float: right;
     color: #007399;
     line-height: 60px;
@@ -273,31 +278,13 @@ a:hover {
     color: #f2f2f2;
     transition: 0.3s;
 }
-#side-nav a:hover, #side-nav a:hover .fa-caret-down, .dropbtn:hover  {
+#side-nav a:hover  {
     color: #fff;
     background-color: #02567e;
 }
 .dropbtn {
     display: block;
     position: relative;
-}
-.fa-caret-down {
-    margin-left: 5%;
-    font-size: 1.25rem;
-    color: #d9d9d9;
-}
-.drop-content {
-    height: 0;
-    margin: 0 0 2% 10%;
-    opacity: 0;
-}
-.dropbtn:hover .drop-content {
-    height: auto;
-    opacity: 1;
-    transition: opacity 1s ease;
-}
-.circle {
-    border-radius: 50%;
 }
 
 
@@ -316,8 +303,19 @@ header {
     left: 0;
 }
 #name h1 {
+    color: #ccd9ff;
     -webkit-animation: 5s cycleColour linear infinite;
     animation: 5s cycleColour linear infinite;
+}
+#name h2 {
+    font-size: 3vw; 
+    color: #fff; 
+    text-shadow: 4px 4px #0086b3;
+}
+#name h3 {
+    margin-top: 2%;
+    font-size: 2vw; 
+    color: #e6f9ff; 
 }
 .stars {
     width: 100%;
@@ -344,13 +342,6 @@ header {
     position: absolute;
     bottom: 0;
     background:  linear-gradient(to bottom, rgba(4, 4, 41, 0), rgba(4, 4, 41, 1));
-}
-#intro-text {
-    padding: 4% 3% 3%;
-    position: absolute; 
-    top: 100vh;
-    color: #fff; 
-    background: linear-gradient(to bottom , #040429, #006080); 
 }
 #stars1 {
     background-image: url(images/header/stars1.png);
@@ -477,7 +468,6 @@ section#programming {
     margin-bottom: 5%;
     border: 2px solid #99e6ff;
     border-radius: 20px;
-    background-color: #0099cc;
     background: linear-gradient(to bottom right, #e6f9ff, #fff);
     transition: box-shadow 0.5s ease;
 }
@@ -493,9 +483,9 @@ section#programming {
 /*Website section*/
 section#websites {
     width: 100%;
-    padding: 3%;
-    background: linear-gradient(to bottom, #fff, #fff, #ccf2ff);
-    border-bottom: 2px solid #99e6ff;
+    padding: 3% 3% 6%;
+    background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
+    border-bottom: 2px solid #99ffe6;
 }
 
 #site-tags {
@@ -506,6 +496,10 @@ section#websites {
     padding: 12px 15px;
     cursor: pointer;
     display: inline-block;
+    font-size: 1.25rem;
+    font-family: "Exo";
+    font-weight: bold;
+    color: #0086b3;
     background-color: #ccf2ff;
     transition: opacity 0.5s ease;
 }
@@ -516,22 +510,28 @@ section#websites {
 #site-container {
     width: 100%;
     display: grid;
-    grid-template-columns: 23% 23% 23% 23%;
+    grid-template-columns: 24% 24% 24% 24%;
     grid-auto-rows: 200px;
-    grid-gap: 3% 2.5%;
+    grid-gap: 3% 1.5%;
 }
 .site {
-    background-color: #e6f9ff;
+    padding: 3%;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, #ccf2ff, #e6f9ff);
     border: 2px solid #99e6ff;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: box-shadow 0.5s ease; 
+}
+.site h3 {
+    margin-bottom: 2%;
+    font-size: 1.25rem;
 }
 .site img {
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
+    height: 80%;
+    border-radius: 0 0 10px 10px;
 }
-.site img:hover {
+.site:hover {
     box-shadow: 2px 2px 10px rgba(0,0,0,0.25);
 }
 
@@ -540,11 +540,11 @@ section#websites {
 }
 .site#featured img {
     height: 70%;
-    border-radius: 0 0 10px 10px;
+    display: block;
 }
 .site#featured #description {
     height: 30%;
-    padding: 2%;
+    padding: 1% 2%;
 }
 .site#featured h3 {
     font-size: 1.5rem;
@@ -645,6 +645,10 @@ footer p {
   color: #ccf2ff;
   float: right;
 }
+footer #resume {
+    left: 2%;
+    float: left;
+}
 #footer-icons{
   width: 100%;
   text-align: center;
@@ -736,18 +740,7 @@ footer p {
         margin: 0;
     }
     #nav-icons {
-        width: 150px;
-        padding-right: 3%;
-        position: fixed;
-        top: auto;
-        right: auto;
-        bottom: 2%;
-        left: 0;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.25);
-        background: linear-gradient(to right, #99ffe6, #99e6ff);
-    }
-    #nav-icons .fa {
-        margin: 0 4%;
+        display: none;
     }
     /*Art section*/
     .art {

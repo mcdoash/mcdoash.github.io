@@ -33,24 +33,9 @@
         <!--Side navigation-->
         <nav id="side-nav">
             <a href="#about" onclick="closeNav()">About</a>
-            <div class="dropbtn">
-                <a href="#volunteer" onclick="closeNav()">Experience
-                <i class="fa fa-caret-down"></i>
-                </a>
-                <div class="drop-content">
-                    <a href="#volunteer" onclick="closeNav()">Volunteer</a>
-                    <a href="#programming" onclick="closeNav()">Education</a>
-                </div>
-            </div>
-            <div class="dropbtn">
-                <a href="#websites" onclick="closeNav()">Portfolio
-                <i class="fa fa-caret-down"></i>
-                </a>
-                <div class="drop-content">
-                    <a href="#websites" onclick="closeNav()">Websites</a>
-                    <a href="#art" onclick="closeNav()">Art</a>
-                </div>
-            </div>
+            <a href="#programming" onclick="closeNav()">Experience</a>
+            <a href="#websites" onclick="closeNav()">Projects</a>
+            <a href="#art" onclick="closeNav()">Art</a>
         </nav>
         
         
@@ -60,8 +45,9 @@
             <!--Header-->
             <header>
                 <div id="name">
-                    <h2 style="font-size: 3vw; color: #fff; text-shadow: 4px 4px #0086b3;">Hi, I'm</h2>
-                    <h1 class="fade-in-view" style="color: #ccd9ff;">&horbar;Ashley McDonald&horbar;</h1>
+                    <h2>Hi, I'm</h2>
+                    <h1 class="fade-in-view">&horbar;Ashley McDonald&horbar;</h1>
+                    <h3>Student | Full Stack Developer | Artist</h3>
                 </div>
                 <div id="mountains">
                     <div id="mountain-fade"></div>
@@ -82,6 +68,7 @@
                 <div id="bar3"></div>
             </div>
             <nav id="top-nav">
+                <h1>Ashley McDonald</h1>
                 <div id="current"><h1>&nbsp;</h1></div>
                 <div id="nav-icons">
                     <a href="mailto:ash.mcdonald@carleton.ca"><i class="icon fas fa-envelope"></i></a>
@@ -136,7 +123,7 @@
             
             
             <!--Programming section-->
-            <section id="programming" link-title="experience: programming">
+            <section id="programming" link-title="experience">
                 <div id="progress-bars" class="col2">
                     <h3>HTML & CSS</h3>
                     <span>Sass</span>
@@ -222,10 +209,11 @@
             
             
             <!--Website section-->
-            <section id="websites" link-title="portfolio: websites">
+            <section id="websites" link-title="projects">
                 <div id="site-tags">
                     <div class="tag">Ruby on Rails</div>
                     <div class="tag">Node</div>
+                    <div class="tag">PHP</div>
                 </div>
 
                 <div id="site-container">
@@ -237,18 +225,23 @@
                         <img src="images/websites/decision-maker.png">
                     </div>
                     <div class="site">
-                        <img src="images/websites/decision-maker.png">
-                    </div>
-                    <div class="site">
-                        <img src="images/websites/trivia-generator.png">
-                    </div>
-                    <div class="site">
+                        <h3>Multiplayer Trivia</h3>
                         <img src="images/websites/multiplayer-trivia.png">
                     </div>
                     <div class="site">
+                        <h3>Trivia Generator</h3>
+                        <img src="images/websites/trivia-generator.png">
+                    </div>
+                    <div class="site">
+                        <h3>Bluetooth Speakers</h3>
+                        <img src="">
+                    </div>
+                    <div class="site">
+                        <h3>To-do List App</h3>
                         <img src="images/websites/to-do-list.png">
                     </div>
                     <div class="site">
+                        <h3>Fridged Pantry</h3>
                         <!--<h3>
                             <a href="https://hackthenorthproject-390b9.firebaseapp.com/" target="_blank">The Fridged Pantry</a>
                             <a href="https://github.com/Central-G-H-O-S-T/FridgedPantry" target="_blank"><i class="icon fab fa-github"></i></a>
@@ -261,16 +254,12 @@
                         </div>-->
                     </div>
                     <div class="site">
+                        <h3>Cosmots</h3>
                         <img src="images/websites/cosmots.png">
                     </div>
                     <div class="site">
+                        <h3>Programming Club</h3>
                         <img src="images/websites/central-programming.png">
-                    </div>
-                    <div class="site">
-                        <img src="images/websites/future-works.png">
-                    </div>
-                    <div class="site">
-                        <img src="images/websites/start-page.png">
                     </div>
                 </div>
                 <div style="clear: both;"></div>
@@ -278,7 +267,7 @@
             
             
             <!--Art section-->
-            <section id="art" link-title="portfolio: art">
+            <section id="art" link-title="art">
                 <div class="flex">
                     <div class="art">
                         <img class="image" src="images/art/rose.jpg" style="width: 125%; margin: -20% 0 0 -20%;" alt="Rose Study">
@@ -326,6 +315,7 @@
             </section>
         
             <footer>
+                <a href="" download><p id="resume"><i class="fas fa-download"></i> Download my resume</p></a>
                 <div id="footer-icons">
                     <a href="mailto:ash.mcdonald@carleton.ca"><i class="icon fas fa-envelope"></i></a>
                     <a href="https://github.com/mcdoash" target="_blank"><i class="icon fab fa-github-square"></i></a>
