@@ -110,3 +110,10 @@ window.onclick = function(event) {
 /*Footer date*/
 var year = new Date().getFullYear();
 $("#date").html(year); 
+
+
+/* */
+$('.site').click(function(){
+    $(".featured").removeClass("featured");
+    $(this).addClass("featured");
+});
