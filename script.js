@@ -112,7 +112,7 @@ var year = new Date().getFullYear();
 $("#date").html(year); 
 
 
-/* */
+/*Featured site*/
 $('.site').click(function(){
     $(".featured").removeClass("featured");
     $(this).addClass("featured");

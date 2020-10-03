@@ -148,8 +148,8 @@ a:hover {
 .show {
     opacity: 1;
     transition: visibility 1s linear;
-    -webkit-animation: 2.5s fadeIn ease-in;
-    animation: 2.5s fadeIn ease-in;
+    -webkit-animation: 0.75s fadeIn ease-in;
+    animation: 0.75s fadeIn ease-in;
 }
 
 
@@ -483,36 +483,17 @@ section#programming {
 /*Website section*/
 section#websites {
     width: 100%;
-    padding: 3% 3% 6%;
+    padding: 3% 3% 8%;
     background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
     border-bottom: 2px solid #99ffe6;
-}
-
-#all-tags {
-    margin-bottom: 2%;
-}
-.tag {
-    margin: 1%;
-    padding: 1% 2%;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1.25rem;
-    font-family: "Exo";
-    font-weight: bold;
-    color: #0086b3;
-    background-color: #ccf2ff;
-    transition: opacity 0.5s ease;
-}
-.tag:hover {
-    opacity: 0.7;
 }
 
 #site-container {
     width: 100%;
     display: grid;
-    grid-template-columns: 24% 24% 24% 24%;
+    grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
     grid-auto-rows: 200px;
-    grid-gap: 3% 1.5%;
+    grid-gap: 4% 2%;
 }
 .site {
     padding: 3%;
@@ -537,10 +518,17 @@ section#websites {
 .site-tags {
     margin: 7% 0 5% 0;
 }
-.site .tag {
+.tag {
+    margin: 1%;
     padding: 2%;
-   font-size: 1rem; 
-   background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem; 
+    font-family: "Exo";
+    font-weight: bold;
+    color: #0086b3;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: opacity 0.5s ease;
 }
 .site .description {
     margin: 4% 0;
