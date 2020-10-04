@@ -618,9 +618,9 @@ section#programming {
 /*Website section*/
 section#websites {
   width: 100%;
-  height: calc(100vh - 60px);
   padding: 3% 3%;
-  background: linear-gradient(to bottom, #fff, #fff, #fff, #e6fff9);
+  position: relative;
+  background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
   border-bottom: 2px solid #99ffe6;
 }
 
@@ -628,7 +628,6 @@ section#websites {
   width: 45%;
   height: 100%;
   float: right;
-  overflow-y: scroll;
 }
 
 .site {
@@ -678,10 +677,10 @@ section#websites {
 
 .site.featured {
   width: 48%;
-  height: 100%;
-  margin: 0 2%;
   padding: 3%;
   float: left;
+  position: sticky;
+  top: calc(60px + 6vh);
   border: 2px solid #99e6ff;
   border-radius: 20px;
   background: linear-gradient(to bottom right, #e6f9ff, #fff);

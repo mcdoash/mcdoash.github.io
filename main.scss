@@ -490,9 +490,9 @@ section#programming {
 /*Website section*/
 section#websites {
     width: 100%;
-    height: calc(100vh - #{$nav-height});
     padding: 3% 3%;
-    background: linear-gradient(to bottom, #fff, #fff, #fff, #e6fff9);
+    position: relative;
+    background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
     border-bottom: 2px solid #99ffe6;
 }
 
@@ -500,7 +500,6 @@ section#websites {
     width: 45%;
     height: 100%;
     float: right;
-    overflow-y: scroll;
 }
 .site {
     margin: 0 0 5% 3%;
@@ -543,10 +542,10 @@ section#websites {
 
 .site.featured {
     width: 48%;
-    height: 100%;
-    margin: 0 2%;
     padding: 3%;
     float: left;
+    position: sticky;
+    top: calc(#{$nav-height} + 6vh);
     @include box;
 
     img {
