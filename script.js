@@ -91,6 +91,13 @@ function positionNavBtn() {
     }
 }
 
+
+/*Featured site*/
+$(".site").click(function(){
+    $(".featured").html($(this).html());
+});
+
+
 /*Art modal*/
 $(".art").click(function(){
     $("#modal-img").attr("src", $(this).children("img").attr("src"));
@@ -110,10 +117,3 @@ window.onclick = function(event) {
 /*Footer date*/
 var year = new Date().getFullYear();
 $("#date").html(year); 
-
-
-/*Featured site*/
-$('.site').click(function(){
-    $(".featured").removeClass("featured");
-    $(this).addClass("featured");
-});

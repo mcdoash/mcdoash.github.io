@@ -627,11 +627,23 @@ section#websites {
 #site-container {
   width: 45%;
   height: 100%;
+  margin-right: 2%;
   float: right;
 }
 
 .site {
-  margin: 0 0 5% 3%;
+  margin-bottom: 3%;
+  padding: 3% 3% 2%;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.site:hover {
+  background-color: #e6f9ff;
+}
+
+.site:hover .tag {
+  background-color: #fff;
 }
 
 .site h3 {
@@ -672,7 +684,11 @@ section#websites {
   font-weight: bold;
   color: #0086b3;
   background-color: #e6f9ff;
-  transition: opacity 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.tag:hover {
+  opacity: 0.5;
 }
 
 .site.featured {
@@ -681,6 +697,7 @@ section#websites {
   float: left;
   position: sticky;
   top: calc(60px + 6vh);
+  cursor: default;
   border: 2px solid #99e6ff;
   border-radius: 20px;
   background: linear-gradient(to bottom right, #e6f9ff, #fff);
