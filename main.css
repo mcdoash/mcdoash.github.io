@@ -51,6 +51,11 @@ p {
   color: #02537d;
 }
 
+p a {
+  color: #007399;
+  font-weight: bold;
+}
+
 a {
   text-decoration: none;
   color: #02537d;
@@ -59,11 +64,6 @@ a {
 
 a:hover {
   opacity: .6;
-}
-
-p a {
-  color: #007399;
-  font-weight: bold;
 }
 
 .parallax {
@@ -585,16 +585,16 @@ section#programming {
   background-color: #e6f7ff;
 }
 
+.bar:hover .progress {
+  opacity: 0.5;
+}
+
 .progress {
   height: 100%;
   margin: 2% 0;
   border-radius: 20px 0 0 20px;
   background: linear-gradient(to right, #80ffdf, #66d9ff);
   transition: opacity 0.5s ease;
-}
-
-.bar:hover .progress {
-  opacity: 0.5;
 }
 
 .exp-box {
@@ -620,7 +620,7 @@ section#websites {
   width: 100%;
   padding: 3% 3%;
   position: relative;
-  background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
+  background: linear-gradient(to bottom, #fff, #fff, #fff, #e6fff9);
   border-bottom: 2px solid #99ffe6;
 }
 
@@ -643,7 +643,7 @@ section#websites {
 }
 
 .site:hover .tag {
-  background-color: #fff;
+  background-color: #fafeff;
 }
 
 .site h3 {
@@ -677,18 +677,13 @@ section#websites {
 .tag {
   margin: 1% 1% 2% 0;
   padding: 2%;
-  cursor: pointer;
   display: inline-block;
   font-size: 1rem;
   font-family: "Exo";
   font-weight: bold;
   color: #0086b3;
   background-color: #e6f9ff;
-  transition: 0.5s ease;
-}
-
-.tag:hover {
-  opacity: 0.5;
+  transition: background-color 0.5s ease;
 }
 
 .site.featured {
@@ -711,6 +706,7 @@ section#websites {
 .site.featured img {
   width: 100%;
   display: block;
+  border: 2px solid rgba(0, 134, 179, 0.75);
 }
 
 .site.featured .site-tags {
@@ -757,15 +753,8 @@ section#art {
   background-size: cover;
 }
 
-.title {
-  width: 100%;
-  padding: 2%;
-  position: absolute;
-  bottom: 0;
-  opacity: 0;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 1s ease;
+.art:hover img + .title {
+  opacity: 1;
 }
 
 .art img {
@@ -776,8 +765,15 @@ section#art {
   opacity: 0.5;
 }
 
-.art:hover img + .title {
-  opacity: 1;
+.title {
+  width: 100%;
+  padding: 2%;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 1s ease;
 }
 
 #modal {
@@ -791,12 +787,6 @@ section#art {
   left: 0;
   text-align: center;
   background-color: rgba(1, 51, 75, 0.85);
-}
-
-#modal-img {
-  height: 80%;
-  margin-top: 2%;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 #modal #caption {
@@ -821,6 +811,12 @@ section#art {
 
 #modal span#close:hover {
   color: #00bfff;
+}
+
+#modal-img {
+  height: 80%;
+  margin-top: 2%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /*footer*/

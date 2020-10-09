@@ -44,6 +44,11 @@ p {
     font-size: 1rem;
     line-height: 1.5;
     color: #02537d;
+
+    a {
+        color: #007399;
+        font-weight: bold;
+    }
 }
 a {
     text-decoration: none;
@@ -53,10 +58,6 @@ a {
     &:hover {
         opacity: .6;
     }
-}
-p a {
-    color: #007399;
-    font-weight: bold;
 }
 
 .parallax {
@@ -314,21 +315,22 @@ header {
     position: absolute;
     top: 20%;
     left: 0;
-}
-#name h1 {
-    color: #ccd9ff;
-    -webkit-animation: 5s cycleColour linear infinite;
-    animation: 5s cycleColour linear infinite;
-}
-#name h2 {
-    font-size: 3vw; 
-    color: #fff; 
-    text-shadow: 4px 4px #0086b3;
-}
-#name h3 {
-    margin-top: 2%;
-    font-size: 2vw; 
-    color: #e6f9ff; 
+
+    h1 {
+        color: #ccd9ff;
+        -webkit-animation: 5s cycleColour linear infinite;
+        animation: 5s cycleColour linear infinite;
+    }
+    h2 {
+        font-size: 3vw; 
+        color: #fff; 
+        text-shadow: 4px 4px #0086b3;
+    }
+    h3 {
+        margin-top: 2%;
+        font-size: 2vw; 
+        color: #e6f9ff; 
+    }
 }
 .stars {
     width: 100%;
@@ -403,33 +405,36 @@ section#about {
     padding: 2% 2% 2% 0;
     margin-right: 5%;
     text-indent: 25px;
-}
-#profile h2 {
-    font-size: 2rem;
-    text-align: left;
+
+    h2 {
+        font-size: 2rem;
+        text-align: left;
+    }
 }
 #info {
     width: 45%;
     min-height: 400px;
     padding: 2% 0;
     margin: 0 auto;
-}
-#info .item {
-  padding: 3% 2%;
-  display: flex;
-}
-#info .icon {
-    width: 25%;
-    margin: auto;
-    text-align: center;
-    color: #0086b3;
+
+    .item {
+        padding: 3% 2%;
+        display: flex;
+    }
+    .icon {
+        width: 25%;
+        margin: auto;
+        text-align: center;
+        color: #0086b3;
+    }
 }
 .text-col {
     width: 74%;
-}
-.text-col h3 {
-  text-align: left;
-  color: #0086b3;
+
+    h3 {
+        text-align: left;
+        color: #0086b3;
+      }
 }
 
 
@@ -444,17 +449,18 @@ section#programming {
     width: 35%;
     margin-bottom: 5%;
     float: left;
-}
-#progress-bars h3 {
-    font-size: 2rem;
-    text-align: left;
-    color: #0099cc;
-    font-family: "Exo";
-    text-shadow: 2px 2px #006080;
-}
-#progress-bars span {
-  font-size: 1.25rem;
-  color: #0099cc;
+
+    h3 {
+        font-size: 2rem;
+        text-align: left;
+        color: #0099cc;
+        font-family: "Exo";
+        text-shadow: 2px 2px #006080;
+    }
+    span {
+        font-size: 1.25rem;
+        color: #0099cc;
+      }
 }
 .bar {
     width: 100%;
@@ -464,6 +470,10 @@ section#programming {
     border-radius: 20px;
     box-shadow: 5px 5px 10px rgba(0, 77, 102, 0.5);
     background-color: hsl(199, 100%, 95%);
+
+    &:hover .progress {
+        opacity: 0.5;
+    }
 }
 .progress {
     height: 100%;
@@ -472,17 +482,15 @@ section#programming {
     background: linear-gradient(to right, #80ffdf, #66d9ff);
     transition: opacity 0.5s ease;
 }
-.bar:hover .progress {
-    opacity: 0.5;
-}
 .exp-box {
     width: 100%;
     padding: 2%;
     margin-bottom: 5%;
     @include box;
-}
-.exp-box ul {
-    margin-bottom: 2%;
+
+    ul {
+        margin-bottom: 2%;
+    }
 }
 
 
@@ -492,7 +500,7 @@ section#websites {
     width: 100%;
     padding: 3% 3%;
     position: relative;
-    background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
+    background: linear-gradient(to bottom, #fff, #fff, #fff, #e6fff9);
     border-bottom: 2px solid #99ffe6;
 }
 
@@ -512,7 +520,7 @@ section#websites {
         background-color: #e6f9ff;
         
         .tag {
-            background-color: #fff;
+            background-color: #fafeff;
         }
     }
     h3 {
@@ -541,18 +549,13 @@ section#websites {
 .tag {
     margin: 1% 1% 2% 0;
     padding: 2%;
-    cursor: pointer;
     display: inline-block;
     font-size: 1rem; 
     font-family: "Exo";
     font-weight: bold;
     color: #0086b3;
     background-color: #e6f9ff;
-    transition: 0.5s ease;
-
-    &:hover {
-        opacity: 0.5;
-    }
+    transition: background-color 0.5s ease;
 }
 
 .site.featured {
@@ -567,6 +570,7 @@ section#websites {
     img {
         width: 100%;
         display: block;
+        border: 2px solid rgba(0, 134, 179, 0.75);
     }
     .site-tags {
         display: none;
@@ -607,6 +611,17 @@ section#art {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    &:hover img + .title {
+        opacity: 1;
+    }
+    img {
+        transition: opacity 1s ease;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
 }
 .title {
     width: 100%;
@@ -617,15 +632,6 @@ section#art {
     color: #fff;
     background-color: rgba(0,0,0,0.5);
     transition: opacity 1s ease;
-}
-.art img {
-    transition: opacity 1s ease;
-}
-.art img:hover {
-    opacity: 0.5;
-}
-.art:hover img + .title {
-    opacity: 1;
 }
 #modal {
     width: 100vw;
@@ -638,32 +644,34 @@ section#art {
     left: 0;
     text-align: center;
     background-color: rgba(1, 51, 75,0.85);
+
+    #caption {
+        width: 100%;
+        padding: 2%;
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+        background-color: rgba(0,0,0,0.5);
+    }
+    span#close {
+        z-index: 100;
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        cursor: pointer;
+        font-size: 75px;
+        color: #99e6ff;
+        transition: color 0.5s;
+
+        &:hover {
+            color: #00bfff;
+        }
+    }
 }
 #modal-img {
     height: 80%;
     margin-top: 2%;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
-}
-#modal #caption {
-    width: 100%;
-    padding: 2%;
-    position: absolute;
-    bottom: 0;
-    color: #fff;
-    background-color: rgba(0,0,0,0.5);
-}
-#modal span#close {
-    z-index: 100;
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    cursor: pointer;
-    font-size: 75px;
-    color: #99e6ff;
-    transition: color 0.5s;
-}
-#modal span#close:hover {
-    color: #00bfff;
 }
 
 
@@ -672,29 +680,32 @@ footer {
   padding: 1%;
   position: relative;
   background-color: #007399;
-}
-footer p {
-  position: absolute;
-  right: 2%;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #ccf2ff;
-  float: right;
-}
-footer #resume {
+
+  p {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccf2ff;
+    float: right;
+  }
+  #resume {
     left: 2%;
     float: left;
+    }
 }
 #footer-icons{
   width: 100%;
   text-align: center;
   line-height: 50px;
   color: #99e6ff;
+
+  .icon {
+    margin: 0 10px;
+    color: #99e6ff;
+  }
 }
-#footer-icons .icon {
-  margin: 0 10px;
-  color: #99e6ff;
-}
+
 
 
 /*Media queries*/
