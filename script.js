@@ -6,21 +6,17 @@ window.onload = function() {
     $("#container").addClass("fade"); 
 }
 
-/*Anchor scrolling*/
-$(document).ready(function(){
-    $("a").on('click', function(event){
-        if(this.hash!==""){
-            event.preventDefault();
-            var hash = this.hash;
 
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top - $("#top-nav").outerHeight()
-            }, 1500, function(){
-                window.location.hash = hash;
-            });
-        }
-    });
+/*Anchor scrolling*/
+$("#side-nav a").on('click', function(event){
+    event.preventDefault();
+    var hash = this.hash;
+    
+    $('html, body').animate({
+        scrollTop: $(hash).offset().top - $("#top-nav").outerHeight()
+    }, 1500);
 });
+
 
 /*Side nav*/
 function openNav(){
@@ -43,21 +39,8 @@ function closeNav() {
     document.getElementById("openbtn").onclick = openNav;
 }
 
+
 /*Element fade when in view, top nav section text*/
-$.fn.isInViewport = function(t) {
-    var elementTop = $(this).offset().top - $("#top-nav").outerHeight();
-    var elementBottom = elementTop + $(this).outerHeight();
-
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-
-    if($(this).hasClass("fade-in-view") || t==1){
-        return elementBottom > viewportTop && elementTop < viewportBottom;
-    }
-    else {
-        return elementTop < (viewportTop + $(window).height()/4) && elementTop < viewportBottom;
-    }
-};
 $(window).on("resize scroll load", function(){
     $(".fade-in-view").each(function(){
         if($(this).isInViewport()){
@@ -73,7 +56,20 @@ $(window).on("resize scroll load", function(){
         }
     });
 });
+$.fn.isInViewport = function(t) {
+    var elementTop = $(this).offset().top - $("#top-nav").outerHeight();
+    var elementBottom = elementTop + $(this).outerHeight();
 
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    if($(this).hasClass("fade-in-view") || t==1){
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    }
+    else {
+        return elementTop < (viewportTop + $(window).height()/4) && elementTop < viewportBottom;
+    }
+};
 
 
 /*Featured site*/
