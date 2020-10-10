@@ -35,14 +35,12 @@ function openNav(){
     } 
     document.getElementById("openbtn").classList.add("change");
     document.getElementById("openbtn").onclick = closeNav;
-    positionNavBtn();
 }
 function closeNav() {
     document.getElementById("side-nav").style.width = "0";
     document.getElementById("container").style.marginLeft = "0";
     document.getElementById("openbtn").classList.remove("change");
     document.getElementById("openbtn").onclick = openNav;
-    positionNavBtn();
 }
 
 /*Element fade when in view, top nav section text*/
@@ -74,22 +72,8 @@ $(window).on("resize scroll load", function(){
             $("#current h1").text($(this).attr("link-title"));
         }
     });
-    positionNavBtn();
 });
 
-function positionNavBtn() {
-    if ($("#openbtn").hasClass("change")){
-        $("#openbtn").css("top", "10px");
-    }
-    else if($(window).scrollTop()<$("header").height()){
-        $("#openbtn").css("transition", "none");
-        let navTop = $("header").height() - $(window).scrollTop() + 10;
-        $("#openbtn").css("top", navTop);
-    }
-    else{
-        $("#openbtn").css("top", "10px");
-    }
-}
 
 
 /*Featured site*/

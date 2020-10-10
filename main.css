@@ -292,13 +292,40 @@ a:hover {
   background: linear-gradient(to right, #99ffe6, #99e6ff);
 }
 
+#top-nav h1 {
+  float: left;
+  margin-left: 7%;
+  line-height: calc(60px - 10px);
+  font-size: 2rem;
+}
+
+#top-nav #current {
+  float: right;
+}
+
+#top-nav #nav-icons {
+  width: 20%;
+  height: calc(60px - 10px);
+  margin-left: 5%;
+  float: right;
+}
+
+#top-nav #nav-icons .icon {
+  margin-left: 2%;
+  color: #007399;
+  line-height: calc(60px - 10px);
+}
+
 #openbtn {
-  position: fixed;
-  left: 2%;
-  top: 1%;
+  margin: 0.5% 0 0 2%;
+  float: left;
   z-index: 100;
   cursor: pointer;
   transition: 0.6s;
+}
+
+#openbtn:hover div {
+  background-color: #00ace6;
 }
 
 #openbtn div {
@@ -309,62 +336,34 @@ a:hover {
   transition: 0.6s;
 }
 
-#openbtn:hover div {
-  background-color: #00ace6;
-}
-
-.change {
-  margin-left: 170px;
-  display: block;
-}
-
-#openbtn.change div {
-  background-color: #d9d9d9;
+#openbtn.change {
+  position: fixed;
+  top: 10px;
+  left: 165px;
 }
 
 #openbtn.change:hover div {
   background-color: #999;
 }
 
-.change #bar1 {
+#openbtn.change div {
+  background-color: #d9d9d9;
+}
+
+#openbtn.change #bar1 {
   -webkit-transform: rotate(-45deg) translate(-8px, 7px);
   -ms-transform: rotate(-45deg) translate(-8px, 7px);
   transform: rotate(-45deg) translate(-8px, 7px);
 }
 
-.change #bar2 {
+#openbtn.change #bar2 {
   opacity: 0;
 }
 
-.change #bar3 {
+#openbtn.change #bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   -ms-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
-}
-
-#top-nav h1 {
-  float: left;
-  margin-left: 7%;
-  line-height: 50px;
-  font-size: 2rem;
-}
-
-#current h1 {
-  float: right;
-  margin-right: 20%;
-}
-
-#nav-icons {
-  width: 100%;
-  position: absolute;
-  top: 0;
-}
-
-#nav-icons .icon {
-  margin: 0 0.5%;
-  float: right;
-  color: #007399;
-  line-height: 60px;
 }
 
 /*Side nav*/
@@ -374,7 +373,7 @@ a:hover {
   padding-top: 5%;
   position: fixed;
   overflow-x: hidden;
-  z-index: 100;
+  z-index: 99;
   top: 0;
   left: 0;
   background-color: #01334b;
@@ -392,11 +391,6 @@ a:hover {
 #side-nav a:hover {
   color: #fff;
   background-color: #02567e;
-}
-
-.dropbtn {
-  display: block;
-  position: relative;
 }
 
 /*Header*/
