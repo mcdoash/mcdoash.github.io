@@ -1,6 +1,10 @@
+$text-colour: #02537d;
+
 * {
     margin: 0;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 html {
     font-size: 20px;
@@ -29,7 +33,7 @@ h2 {
     letter-spacing: 2px;
     line-height: 1.25;
     text-align: center;
-    color: #02537d;
+    color: $text-colour;
 }
 h3 {
     font-size: 1.75rem;
@@ -37,13 +41,13 @@ h3 {
     letter-spacing: 2px;
     line-height: 1.25;
     text-align: center;
-    color: #02537d;
+    color: $text-colour;
 }
 p {
     font-family: "Source Serif Pro";
     font-size: 1rem;
     line-height: 1.5;
-    color: #02537d;
+    color: $text-colour;
 
     a {
         color: #007399;
@@ -52,7 +56,7 @@ p {
 }
 a {
     text-decoration: none;
-    color: #02537d;
+    color: $text-colour;
     transition: opacity 0.5s ease;
     
     &:hover {
@@ -66,7 +70,7 @@ a {
 /*Icons*/
 .icon {
     font-size: 50px;
-    color: #02537d;
+    color: $text-colour;
     transition: opacity 0.5s ease, color 0.5s ease;
 
     &:hover {
@@ -224,7 +228,7 @@ $nav-height: 60px;
         float: right;
     
         .icon {
-            margin-left: 2%;
+            margin-left: 3%;
             color: #007399;
             line-height: calc(#{$nav-height} - 10px);
         }
@@ -501,7 +505,7 @@ section#websites {
     width: 100%;
     padding: 3% 3%;
     position: relative;
-    background: linear-gradient(to bottom, #fff, #fff, #fff, #e6fff9);
+    background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
     border-bottom: 2px solid #99ffe6;
 }
 
@@ -510,55 +514,70 @@ section#websites {
     height: 100%;
     margin-right: 2%;
     float: right;
-}
-.site {
-    margin-bottom: 3%;
-    padding: 3% 3% 2%;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
 
-    &:hover {
-        background-color: #e6f9ff;
-        
-        .tag {
-            background-color: #fafeff;
+    .site {
+        margin-bottom: 3%;
+        padding: 3% 3% 2%;
+        cursor: pointer;
+        transition: background-color 0.5s ease;
+
+        &:hover {
+            background-color: #e6f9ff;
+            
+            .tag {
+                background-color: #fafeff;
+            }
+        }
+        h3 {
+            text-align: left;
+            font-size: 1.25rem;
+            border-bottom: 1px solid $text-colour;
+        }
+        .site-tags {
+            margin: 2% 0 0 20px;
+        }
+        .description {
+            display: none;
+        }
+        .description-short {
+            margin: 3% 0 0 20px;
+            display: block;
+        }
+        .icon {
+            display: none;
+        }
+        img {
+            display: none;
         }
     }
-    h3 {
+    .tag {
+        margin: 1% 1% 2% 0;
+        padding: 2%;
+        display: inline-block;
+        font-size: 1rem; 
+        font-family: "Exo";
+        font-weight: bold;
+        color: #0086b3;
+        background-color: #e6f9ff;
+        transition: background-color 0.5s ease;
+    }
+    #view-more a {
+        padding: 1% 2%;
         text-align: left;
-        font-size: 1.25rem;
-        border-bottom: 1px solid #02537d;
-    }
-    .site-tags {
-        margin-top: 2%;
-    }
-    .description {
-        margin: 4% 0;
-        display: none;
-    }
-    .description-short {
-        margin-top: 3%;
-        display: block;
-    }
-    .icon {
-        display: none;
-    }
-    img {
-        display: none;
+        font-size: 1.2rem;
+        color: #0086b3;
+        background-color: #fff;
+        border: 1px solid #99e6ff;
+        transition: 0.5s ease;
+    
+        &:hover {
+            box-shadow: 5px 5px 15px rgba(0, 115, 153, 0.25);
+        }
+        .icon {
+            font-size: 1.25rem;
+        }
     }
 }
-.tag {
-    margin: 1% 1% 2% 0;
-    padding: 2%;
-    display: inline-block;
-    font-size: 1rem; 
-    font-family: "Exo";
-    font-weight: bold;
-    color: #0086b3;
-    background-color: #e6f9ff;
-    transition: background-color 0.5s ease;
-}
-
 .site.featured {
     width: 48%;
     padding: 3%;
@@ -577,9 +596,9 @@ section#websites {
         display: none;
     }
     .description {
-        padding: 0 2%;
+        margin: 2% 0 4%;
         display: block;
-        line-height: 1;
+        line-height: 1.25;
     }
     .description-short {
         display: none;
@@ -678,35 +697,33 @@ section#art {
 
 /*footer*/
 footer {
-  padding: 1%;
-  position: relative;
-  background-color: #007399;
+    padding: 1%;
+    position: relative;
+    background-color: #007399;
+    border-top: 2px solid $text-colour;
 
-  p {
-    position: absolute;
-    right: 2%;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #ccf2ff;
-    float: right;
-  }
-  #resume {
-    left: 2%;
-    float: left;
+    p {
+        position: absolute;
+        top: 52%;
+        right: 2%;
+        transform: translateY(-50%);
+        color: #ccf2ff;
+    }
+    p#resume {
+        width: fit-content;
+        left: 2%;
+        a { color: #ccf2ff; }
+    }
+    #footer-icons{
+        width: 100%;
+        text-align: center;
+
+        .icon {
+            margin: 0 10px;
+            color: #99e6ff;
+        }
     }
 }
-#footer-icons{
-  width: 100%;
-  text-align: center;
-  line-height: 50px;
-  color: #99e6ff;
-
-  .icon {
-    margin: 0 10px;
-    color: #99e6ff;
-  }
-}
-
 
 
 /*Media queries*/

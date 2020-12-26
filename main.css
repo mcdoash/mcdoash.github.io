@@ -1,6 +1,8 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 html {
@@ -311,7 +313,7 @@ a:hover {
 }
 
 #top-nav #nav-icons .icon {
-  margin-left: 2%;
+  margin-left: 3%;
   color: #007399;
   line-height: calc(60px - 10px);
 }
@@ -614,7 +616,7 @@ section#websites {
   width: 100%;
   padding: 3% 3%;
   position: relative;
-  background: linear-gradient(to bottom, #fff, #fff, #fff, #e6fff9);
+  background: linear-gradient(to bottom, #fff, #fff, #e6fff9);
   border-bottom: 2px solid #99ffe6;
 }
 
@@ -625,50 +627,49 @@ section#websites {
   float: right;
 }
 
-.site {
+#site-container .site {
   margin-bottom: 3%;
   padding: 3% 3% 2%;
   cursor: pointer;
   transition: background-color 0.5s ease;
 }
 
-.site:hover {
+#site-container .site:hover {
   background-color: #e6f9ff;
 }
 
-.site:hover .tag {
+#site-container .site:hover .tag {
   background-color: #fafeff;
 }
 
-.site h3 {
+#site-container .site h3 {
   text-align: left;
   font-size: 1.25rem;
   border-bottom: 1px solid #02537d;
 }
 
-.site .site-tags {
-  margin-top: 2%;
+#site-container .site .site-tags {
+  margin: 2% 0 0 20px;
 }
 
-.site .description {
-  margin: 4% 0;
+#site-container .site .description {
   display: none;
 }
 
-.site .description-short {
-  margin-top: 3%;
+#site-container .site .description-short {
+  margin: 3% 0 0 20px;
   display: block;
 }
 
-.site .icon {
+#site-container .site .icon {
   display: none;
 }
 
-.site img {
+#site-container .site img {
   display: none;
 }
 
-.tag {
+#site-container .tag {
   margin: 1% 1% 2% 0;
   padding: 2%;
   display: inline-block;
@@ -678,6 +679,24 @@ section#websites {
   color: #0086b3;
   background-color: #e6f9ff;
   transition: background-color 0.5s ease;
+}
+
+#site-container #view-more a {
+  padding: 1% 2%;
+  text-align: left;
+  font-size: 1.2rem;
+  color: #0086b3;
+  background-color: #fff;
+  border: 1px solid #99e6ff;
+  transition: 0.5s ease;
+}
+
+#site-container #view-more a:hover {
+  box-shadow: 5px 5px 15px rgba(0, 115, 153, 0.25);
+}
+
+#site-container #view-more a .icon {
+  font-size: 1.25rem;
 }
 
 .site.featured {
@@ -708,9 +727,9 @@ section#websites {
 }
 
 .site.featured .description {
-  padding: 0 2%;
+  margin: 2% 0 4%;
   display: block;
-  line-height: 1;
+  line-height: 1.25;
 }
 
 .site.featured .description-short {
@@ -818,30 +837,32 @@ footer {
   padding: 1%;
   position: relative;
   background-color: #007399;
+  border-top: 2px solid #02537d;
 }
 
 footer p {
   position: absolute;
+  top: 52%;
   right: 2%;
-  top: 50%;
   transform: translateY(-50%);
   color: #ccf2ff;
-  float: right;
 }
 
-footer #resume {
+footer p#resume {
+  width: fit-content;
   left: 2%;
-  float: left;
 }
 
-#footer-icons {
+footer p#resume a {
+  color: #ccf2ff;
+}
+
+footer #footer-icons {
   width: 100%;
   text-align: center;
-  line-height: 50px;
-  color: #99e6ff;
 }
 
-#footer-icons .icon {
+footer #footer-icons .icon {
   margin: 0 10px;
   color: #99e6ff;
 }

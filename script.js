@@ -8,13 +8,15 @@ window.onload = function() {
 
 
 /*Anchor scrolling*/
-$("#side-nav a").on('click', function(event){
-    event.preventDefault();
-    var hash = this.hash;
-    
-    $('html, body').animate({
-        scrollTop: $(hash).offset().top - $("#top-nav").outerHeight()
-    }, 1500);
+$("a").on("click", function(event){
+    if(this.hash !== ""){
+        event.preventDefault();
+        var hash = this.hash;
+        
+        $("html, body").animate({
+            scrollTop: $(hash).offset().top - $("#top-nav").outerHeight()
+        }, 1500);
+    }
 });
 
 
@@ -56,14 +58,14 @@ $(window).on("resize scroll load", function(){
         }
     });
 });
-$.fn.isInViewport = function(t) {
+$.fn.isInViewport = function() {
     var elementTop = $(this).offset().top - $("#top-nav").outerHeight();
     var elementBottom = elementTop + $(this).outerHeight();
 
     var viewportTop = $(window).scrollTop();
     var viewportBottom = viewportTop + $(window).height();
 
-    if($(this).hasClass("fade-in-view") || t==1){
+    if($(this).hasClass("fade-in-view")){
         return elementBottom > viewportTop && elementTop < viewportBottom;
     }
     else {
@@ -85,7 +87,7 @@ $(".art").click(function(){
     $("#caption").text($(this).children(".title").text());
     $("#modal").fadeIn(1000);
 });
-$('#close').click(function(){
+$("#close").click(function(){
     $("#modal").fadeOut(1000);
 });
 window.onclick = function(event) {
