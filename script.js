@@ -1,12 +1,3 @@
-/*Loader*/
-window.onload = function() {
-    $("#load-screen").css("display", "none");
-    $("body").css("overflow", "visible");
-    $("#container").removeClass("hidden");
-    $("#container").addClass("fade"); 
-}
-
-
 /*Anchor scrolling*/
 $("a").on("click", function(event){
     if(this.hash !== ""){
@@ -77,6 +68,8 @@ $.fn.isInViewport = function() {
 /*Featured site*/
 $(".site").click(function(){
     $(".featured").html($(this).html());
+    $(".site").css("background-color", "transparent");
+    $(this).css("background-color", "#e6f9ff");
 });
 
 

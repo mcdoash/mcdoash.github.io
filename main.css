@@ -251,33 +251,6 @@ a:hover {
   animation: 0.75s fadeIn ease-in;
 }
 
-/*Loader*/
-#load-screen {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  background: linear-gradient(to bottom, #040429, #0086b3);
-}
-
-#spinner {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto;
-  border: 15px solid #99e6ff;
-  border-top: 15px solid #0398e2;
-  border-radius: 50%;
-  animation: spin 2s linear infinite;
-}
-
-.hidden {
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-}
-
 /*Top nav*/
 #top-nav {
   width: 100%;
@@ -506,7 +479,7 @@ section#about {
 
 #profile {
   width: 50%;
-  padding: 2% 2% 2% 0;
+  padding: 0 2%;
   margin-right: 5%;
   text-indent: 25px;
 }
@@ -519,7 +492,6 @@ section#about {
 #info {
   width: 45%;
   min-height: 400px;
-  padding: 2% 0;
   margin: 0 auto;
 }
 
@@ -703,6 +675,7 @@ section#websites {
   width: 48%;
   padding: 3%;
   float: left;
+  position: -webkit-sticky;
   position: sticky;
   top: calc(60px + 6vh);
   cursor: default;
