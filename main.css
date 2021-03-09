@@ -175,6 +175,7 @@ header {
     text-align: center;
 }
 #social-links .icon {
+    margin: 0 1vw;
     font-size: 3rem;
     color: #fff;
     text-shadow: 4px 4px #0086b3;
