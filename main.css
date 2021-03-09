@@ -321,6 +321,20 @@ header {
     -webkit-animation: 5s cycleColour linear infinite;
     animation: 5s cycleColour linear infinite;
 }
+#name h3 {
+    margin-top: 2%;
+    font-size: 2vw;
+    color: #e6f9ff;
+}
+#social-links {
+    margin-top: 4%;
+    text-align: center;
+}
+#social-links .icon {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 4px 4px #0086b3;
+}
 .stars {
     width: 100%;
     height: 100%;
@@ -724,6 +738,9 @@ section#art {
     #name h1 {
         font-size: 8vw;
     }
+    #name h3 {
+        font-size: 3vw;
+    }
     /*Volunteer section*/
     #dot-holder {
         bottom: 550px;
@@ -768,6 +785,9 @@ section#art {
     }
     #name h1 {
         font-size: 12vw;
+    }
+    #name h3 {
+        font-size: 4vw;
     }
     #more {
         left: 43%;
